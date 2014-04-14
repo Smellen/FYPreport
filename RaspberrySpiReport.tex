@@ -61,12 +61,12 @@ Raspberry Spi differs from other security systems with regards to size and cost.
 \chapter {Design}
 \label {ch:design}
 % Hardware required
-	One of the main aims of this project is to make it easy for others to set up. With this in mind there are not a lot of hardware components required for the Raspberry Spi. Additional hardware items such as a keyboard and mouse would only be needed for initial set up. \\
+	One of the main aims of this project is to make it easy for others to set up. With this in mind there are not a lot of hardware components required for the Raspberry Spi. Additional hardware items such as a keyboard and mouse would only be needed for initial set up. But can be used if needed. \\
 	
 \section {Hardware}	
 \label {sec:hardware}
 
-The following is a list of hardware components necessary:
+The following is a list of hardware components necessary:\\
 \begin {itemize}
   \item Raspberry Pi Model B
   \item Raspberry Pi Case
@@ -74,7 +74,41 @@ The following is a list of hardware components necessary:
   \item USB Hub powered externally
   \item Wifi Adapter
   \item SD card
+\end {itemize} 
+
+{\bf Raspberry Pi Model B:} \\
+The Raspberry Pi is described as a credit card sized computer. There are two available models but for this project Model B is used. The features on a Raspberry Pi are:
+\begin {itemize}
+  \item ARM Processor capable of 700 MHz
+  \item 512 MB (Shared with the GPU)
+  \item HDMI
+  \item Composite RCA connector
+  \item CSI connector for the Raspberry Pi Camera
+  \item 2 USB ports
+  \item 3.5mm Audio Jack\\
 \end {itemize}
+
+{\bf Raspberry Pi Case:} \\ 
+Most Raspberry Pi's may not be sold with an external case. The case is essential because otherwise the Raspberry will have no protection and can get damaged very easily. A model B case is needed so there is space for the camera module to connect to the CSI connector on the Raspberry board. Model A did not have a space for the camera to connect so they have a different style case.\\
+
+{\bf Raspberry Pi Camera Module:} \\
+The camera module is a camera that has been designed specifically for the Raspberry Pi. It connects directly into the pi to the CSI connector rather than USB. The CSI connector exclusively carries pixel data and because of this it is capable of extremely high data rates.\\
+
+The camera itself is not expensive yet it can output images and video of very high quality. For images the max resolution capable is 2592 x 1944. Video is capable of being captured in 1080p quality.\\
+
+There is an infared filter on the camera and therefore it cannot detect IR. There is another camera module called the Pi Noir which is available.\\ 
+
+{\bf USB Hub powered externally:}\\
+
+A USB Hub is required to attach any USB components. If any component is connected directly to the Pi it will power it. This will cause the Pi to heat up. If the Raspberry was left on for several hours as this project aims to be it could cause damage to the pi. An externally powered USB hub will allow for the Pi to avoid heating up. Also an external USB hub will allow more then 2 USB devices to be connected.
+
+
+{\bf Wifi Adapter:}\\
+When connecting to the internet a Wifi Adapter will be more useful then an Ethernet cable. By using an adapter it will avoid having to hide another cable and overall make the Pi neater to set up. \\
+
+{\bf SD card:}\\
+An SD card will act as storage for the Pi. Most Raspberry Pi's do not come with an SD card and must be bought separately. The Raspberry Pi has no on board memory. An operating system will be loaded onto it and it will also store all images taken. External hard drives can be used to store the images but that will be a decision left to the end user.\\
+
 
 \section {Software}	
 \label {sec:software}	
@@ -83,6 +117,7 @@ The following is a list of all the software that will need to be installed:
 \begin {itemize}
 
   \item Operating System Raspian 
+  \item UV4L (Universal Video 4 Linux)  
   \item OpenCV
   \item Apache
   \item Motion
@@ -91,8 +126,8 @@ The following is a list of all the software that will need to be installed:
 
 \section {Additional}	
 \label {sec:additional}
-With the Raspberry Spi being set up on a home network port forwarding needs to be enabled. Port forwarding will allow for HTTP requests to be sent to the pi. 
-%
+With the Raspberry Spi being set up on a home network port forwarding needs to be enabled. Port forwarding will different for each end users router. For this reason no explanation will be given and the end user will need to consult their router manual or search for the answer online. 
+
 \begin{center}
     \begin{tabular}{ | l | p{7cm} |}
     \hline
@@ -101,7 +136,14 @@ With the Raspberry Spi being set up on a home network port forwarding needs to b
    8000/9000 or 8080 & Video Live Streaming but can be changed\\ \hline
 	22 & SSH into the Raspberry (Optional) \\ \hline
     \end{tabular}
-\end{center}
+    \\[0.5cm]
+\end{center} 
+
+Port 80 is necessary and until this port is open Raspberry Spi will not be able to work. With port 80 open when the router receives a HTTP request it will know which device on the network to send the request to.
+
+Port 22 is optional and will depend on how the end user will interact and make changes on the Raspberry Pi itself. If port 22 is open this will allow a user to SSH directly into it. SSHing into the Pi will let the user make changes from another computer instead of using the Raspberry and having to attach a keyboard and mouse.
+
+
 %
 %
 \chapter {Implementation}
