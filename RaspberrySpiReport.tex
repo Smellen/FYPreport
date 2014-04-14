@@ -13,7 +13,7 @@
 	\textsc{\huge Trinity College}\\ [0.5cm]
 	\textsc{\large Raspberry Spi}\\ [0.5cm]
 
-Ellen Burke  \\ B.A. (Mod.) Computer Science \\ Final Year Project April 2014 \\ Supervisor: Fergal Shevlin \\[1.5cm]
+Ellen Marie Burke  \\ B.A. (Mod.) Computer Science \\ Final Year Project April 2014 \\ Supervisor: Fergal Shevlin \\[1.5cm]
 
 	\textsc{\large School of Computer Science and Statistics} \\ 
 	\textsc{\large O'Reilly Institute, Trinity College, Dublin 2, Ireland} \\ 
@@ -26,7 +26,7 @@ Ellen Burke  \\ B.A. (Mod.) Computer Science \\ Final Year Project April 2014 \\
 \begin {abstract}
 	\textsc{\huge Declaration} \\[1.5cm]
 I hereby declare that this project is entirely my own work and that it has not been submitted as an exercise for a degree at this or any other university \\ [2.0cm]
-	\textbf{Ellen Burke 23rd April 2014}
+	\textbf{Ellen Marie Burke 23rd April 2014}
 \end {abstract}
 
 \begin {abstract}
@@ -47,22 +47,61 @@ I hereby declare that this project is entirely my own work and that it has not b
 %\section {Introduction}     % section 2.1
 %\subsection {Usage}         % subsection 2.1.1
 
-%\begin {thebibliography}{9}
-  % type bibliography here
-%\end {thebibliography}
+
 
 \tableofcontents
 \chapter {Introduction}
 \label {ch:intro} 
 % Aim & What is Raspberry Spi?
+The aim of this project is to look at home security systems in a different way. The Raspberry Spi will allow users to set up a system and have complete control over it. It will allow for additional features to be used. 
 % How is it different from other security systems?
+Raspberry Spi differs from other security systems with regards to size and cost. 
 % 
 % 
 \chapter {Design}
 \label {ch:design}
 % Hardware required
+	One of the main aims of this project is to make it easy for others to set up. With this in mind there are not a lot of hardware components required for the Raspberry Spi. Additional hardware items such as a keyboard and mouse would only be needed for initial set up. \\
+	
+\section {Hardware}	
+\label {sec:hardware}
+
+The following is a list of hardware components necessary:
+\begin {itemize}
+  \item Raspberry Pi Model B
+  \item Raspberry Pi Case
+  \item Raspberry Pi Camera Module
+  \item USB Hub powered externally
+  \item Wifi Adapter
+  \item SD card
+\end {itemize}
+
+\section {Software}	
+\label {sec:software}	
 % Software required
+The following is a list of all the software that will need to be installed:
+\begin {itemize}
+
+  \item Operating System Raspian 
+  \item OpenCV
+  \item Apache
+  \item Motion
+
+\end {itemize}
+
+\section {Additional}	
+\label {sec:additional}
+With the Raspberry Spi being set up on a home network port forwarding needs to be enabled. Port forwarding will allow for HTTP requests to be sent to the pi. 
 %
+\begin{center}
+    \begin{tabular}{ | l | p{7cm} |}
+    \hline
+    {\bf Port} & {\bf Needed for} \\ \hline
+   80 & HTTP Requests \\ \hline 
+   8000/9000 or 8080 & Video Live Streaming but can be changed\\ \hline
+	22 & SSH into the Raspberry (Optional) \\ \hline
+    \end{tabular}
+\end{center}
 %
 %
 \chapter {Implementation}
@@ -90,6 +129,8 @@ I hereby declare that this project is entirely my own work and that it has not b
  The Raspberry Spi is a way to set up a home security system that is affordable, easy to hide and not complex. It can have multiple real life uses depending on the end user. Being set up on a home network allows for having full control over the system from who can access the Raspberry to the resolution of images being used. All of the Raspberry Spi code is available to download from github which allows for endless possibilities of additional extras.
 \end{small}
 
-	
+%\begin {thebibliography}{9}
+  % type bibliography here
+%\end {thebibliography}	
 
 \end {document} 

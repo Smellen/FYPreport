@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.4.14)  14 APR 2014 16:52
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.4.14)  14 APR 2014 17:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -221,38 +221,50 @@ Chapter 1.
 
 ]
 Chapter 2.
-[3
 
-]
+Underfull \hbox (badness 10000) in paragraph at lines 64--65
+
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 71.
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 71.
+ [3
+
+] [4]
 Chapter 3.
-[4
-
-]
-Chapter 4.
 [5
 
 ]
-Chapter 5.
+Chapter 4.
 [6
+
+]
+Chapter 5.
+[7
 
 ] (./RaspberrySpiReport.aux) ) 
 Here is how much of TeX's memory you used:
- 2155 strings out of 494985
- 29058 string characters out of 6180356
- 84443 words of memory out of 5000000
- 5364 multiletter control sequences out of 15000+600000
- 6362 words of font info for 23 fonts, out of 8000000 for 9000
+ 2181 strings out of 494985
+ 29465 string characters out of 6180356
+ 86473 words of memory out of 5000000
+ 5385 multiletter control sequences out of 15000+600000
+ 7421 words of font info for 27 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 38i,5n,23p,478b,147s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,8n,23p,478b,184s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
 nts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
-0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb>
-Output written on RaspberrySpiReport.pdf (10 pages, 134339 bytes).
+0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on RaspberrySpiReport.pdf (11 pages, 148835 bytes).
 PDF statistics:
- 58 PDF objects out of 1000 (max. 8388607)
- 39 compressed objects within 1 object stream
+ 65 PDF objects out of 1000 (max. 8388607)
+ 44 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
