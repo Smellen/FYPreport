@@ -2,6 +2,7 @@
 \usepackage {graphicx}
 \usepackage{amsmath} 
 \usepackage{abstract}
+\usepackage{caption}
        
 \begin {document}
 
@@ -38,15 +39,6 @@ I hereby declare that this project is entirely my own work and that it has not b
 	\textsc{\huge Abstract}  \\[1.0cm]
 	Security systems set up in homes can be expensive and complex to set up. The cameras used can be bulky in size and therefore difficult to successfully hide. This project is to create a home security system using a Raspberry Pi and the Raspberry Pi camera module.  
 \end {abstract}
-
-%\chapter {\TeX}             % chapter 1
-%\section {Introduction}     % section 1.1
-%\subsection {History}       % subsection 1.1.1
-
-%\chapter {\LaTeX}           % chapter 2
-%\section {Introduction}     % section 2.1
-%\subsection {Usage}         % subsection 2.1.1
-
 
 
 \tableofcontents
@@ -87,6 +79,15 @@ The Raspberry Pi is described as a credit card sized computer. There are two ava
   \item 2 USB ports
   \item 3.5mm Audio Jack\\
 \end {itemize}
+  
+% Reference Image: http://readwrite.com/2014/01/20/raspberry-pi-everything-you-need-to-know#awesm=~oBwfeWDLWC0rMX
+
+\begin {figure}[ht!]
+	\centering	
+	\includegraphics [scale=0.15]{../../Pictures/modelb.jpg}\\
+	\caption{Raspberry Pi Model B board layout}
+\end {figure}
+
 
 {\bf Raspberry Pi Case:} \\ 
 Most Raspberry Pi's may not be sold with an external case. The case is essential because otherwise the Raspberry will have no protection and can get damaged very easily. A model B case is needed so there is space for the camera module to connect to the CSI connector on the Raspberry board. Model A did not have a space for the camera to connect so they have a different style case.\\
@@ -98,13 +99,31 @@ The camera itself is not expensive yet it can output images and video of very hi
 
 There is an infared filter on the camera and therefore it cannot detect IR. There is another camera module called the Pi Noir which is available.\\ 
 
+
+% Reference Image: http://www.adafruit.com/products/1367
+% Both images from the site
+\begin {figure}[ht!]
+	\centering	
+	\includegraphics [scale=0.9]{../../Pictures/cameramodule.jpg} 
+	\caption{Raspberry Pi Camera Module}
+\end {figure}
+
+\begin {figure}[ht!]
+	\centering	
+	\includegraphics [scale=0.75]{../../Pictures/camattachedraspberry.jpg} 
+	\caption{Camera Module attached to the Raspberry board with no casing}
+\end {figure}
+
+
 {\bf USB Hub powered externally:}\\
 
-A USB Hub is required to attach any USB components. If any component is connected directly to the Pi it will power it. This will cause the Pi to heat up. If the Raspberry was left on for several hours as this project aims to be it could cause damage to the pi. An externally powered USB hub will allow for the Pi to avoid heating up. Also an external USB hub will allow more then 2 USB devices to be connected.
+A USB Hub is required to attach any USB components. If any component is connected directly to the Pi it will power it. This will cause the Pi to heat up. If the Raspberry was left on for several hours as this project aims to be it could cause damage to the pi. An externally powered USB hub will allow for the Pi to avoid heating up. Also an external USB hub will allow more then 2 USB devices to be connected.\\
 
 
 {\bf Wifi Adapter:}\\
-When connecting to the internet a Wifi Adapter will be more useful then an Ethernet cable. By using an adapter it will avoid having to hide another cable and overall make the Pi neater to set up. \\
+When connecting to the internet a Wifi Adapter will be more useful then an Ethernet cable. By using an adapter it will avoid having to hide another cable and overall make the Pi neater to set up.\\
+
+Using a Wifi Adapter is not a requirement of this project but is more of a recommendation.\\
 
 {\bf SD card:}\\
 An SD card will act as storage for the Pi. Most Raspberry Pi's do not come with an SD card and must be bought separately. The Raspberry Pi has no on board memory. An operating system will be loaded onto it and it will also store all images taken. External hard drives can be used to store the images but that will be a decision left to the end user.\\
@@ -115,33 +134,54 @@ An SD card will act as storage for the Pi. Most Raspberry Pi's do not come with 
 % Software required
 The following is a list of all the software that will need to be installed:
 \begin {itemize}
-
   \item Operating System Raspian 
   \item UV4L (Universal Video 4 Linux)  
   \item OpenCV
   \item Apache
   \item Motion
-
 \end {itemize}
+
+{\bf Operating System Raspian:}\\
+
+With the Raspberry Pi there are several operating systems to choose from. This project uses Raspian because it is the most popular OS for the Pi. Being the most popular it is easy to debug problems and solve issues that arise when searching online.\\ 
+
+
+{\bf UV4L (Universal Video 4 Linux):}\\
+
+The camera modules default driver is called RaspiCam. RaspiCam does not work properly with OpenCV. When OpenCV tries to locate a camera it looks for a device ID. The camera module does have a device ID but it's not an integer value. It's the value 'pi' because of this OpenCV cannot use the Camera Module with it's default drivers. To get around this driver problem UV4L (Universal Video 4 Linux) is used instead. UV4L allows OpenCV to locate and use the Camera.
+
+When using this driver the UV4L initializing script must be run. It can be added to the Raspberry's start up script or can be called after each boot. The parameters passed in can be interchangeable.\\
+
+{\bf OpenCV:}\\
+
+For all image and video and image processing the computer vision library OpenCV is needed.\\
+
+
+
+
+{\bf Apache:}\\
+
+
+{\bf Motion:}\\
 
 \section {Additional}	
 \label {sec:additional}
-With the Raspberry Spi being set up on a home network port forwarding needs to be enabled. Port forwarding will different for each end users router. For this reason no explanation will be given and the end user will need to consult their router manual or search for the answer online. 
+With the Raspberry Spi being set up on a home network port forwarding needs to be enabled. Port forwarding will different for each end users router. For this reason no explanation will be given and the end user will need to consult their router manual or search for the answer online. \\
 
-\begin{center}
-    \begin{tabular}{ | l | p{7cm} |}
+\begin {center}
+    \begin {tabular}{ | l | p{7cm} |}
     \hline
     {\bf Port} & {\bf Needed for} \\ \hline
    80 & HTTP Requests \\ \hline 
    8000/9000 or 8080 & Video Live Streaming but can be changed\\ \hline
 	22 & SSH into the Raspberry (Optional) \\ \hline
-    \end{tabular}
+    \end {tabular}
     \\[0.5cm]
-\end{center} 
+\end {center} 
 
-Port 80 is necessary and until this port is open Raspberry Spi will not be able to work. With port 80 open when the router receives a HTTP request it will know which device on the network to send the request to.
+Port 80 is necessary and until this port is open Raspberry Spi will not be able to work. With port 80 open when the router receives a HTTP request it will know which device on the network to send the request to.\\
 
-Port 22 is optional and will depend on how the end user will interact and make changes on the Raspberry Pi itself. If port 22 is open this will allow a user to SSH directly into it. SSHing into the Pi will let the user make changes from another computer instead of using the Raspberry and having to attach a keyboard and mouse.
+Port 22 is optional and will depend on how the end user will interact and make changes on the Raspberry Pi itself. If port 22 is open this will allow a user to SSH directly into it. SSHing into the Pi will let the user make changes from another computer instead of using the Raspberry and having to attach a keyboard and mouse.\\
 
 
 %
@@ -150,9 +190,9 @@ Port 22 is optional and will depend on how the end user will interact and make c
 \label {ch:implem}
 % Website
 % Open CV 1-Motion 2-Real time photo
-%
-%
-%
+% LiveStreaming
+% Help page
+% Future Possibilites
 \chapter {Testing}
 \label {ch:test}
 %
@@ -168,7 +208,7 @@ Port 22 is optional and will depend on how the end user will interact and make c
 %
 %
 \begin{small}
- The Raspberry Spi is a way to set up a home security system that is affordable, easy to hide and not complex. It can have multiple real life uses depending on the end user. Being set up on a home network allows for having full control over the system from who can access the Raspberry to the resolution of images being used. All of the Raspberry Spi code is available to download from github which allows for endless possibilities of additional extras.
+ The Raspberry Spi is a way to set up a home security system that is affordable, easy to hide and not complex. It can have multiple real life uses depending on the end user. Being set up on a home network allows for having full control over the system from who can access the Raspberry to the resolution of images being used. All of the Raspberry Spi code is available to download from github which allows for endless possibilities of additional extras.\\
 \end{small}
 
 %\begin {thebibliography}{9}
