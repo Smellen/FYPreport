@@ -4,7 +4,6 @@
 \usepackage{abstract}
 \usepackage{caption}
 \usepackage{float} 
-%\usepackage{hyperref} 
      
 \begin {document}
 
@@ -47,11 +46,20 @@ I hereby declare that this project is entirely my own work and that it has not b
 \tableofcontents
 \chapter {Introduction}
 \label {ch:intro} 
+
+\section {Motivation/Problem}
+\label {sec:motprob}
 % Aim & What is Raspberry Spi?
 The aim of this project is to look at home security systems in a different way. The Raspberry Spi will allow users to set up a system and have complete control over it. It will allow for additional features to be used. 
 % How is it different from other security systems?
 Raspberry Spi differs from other security systems with regards to size and cost. 
 % 
+\section {Research Objectives}
+\label {sec:researchobj}
+Objective of the research is to \ldots
+\section {Technical Approach/Methodology}
+\label {sec:tech}
+Technical approach is \ldots
 % 
 \chapter {Design}
 \label {ch:design}
@@ -71,8 +79,9 @@ The following is a list of hardware components necessary:\\
   \item SD card
 \end {itemize} 
 
+\noindent
 {\bf Raspberry Pi Model B:} \\
-
+\break
 The Raspberry Pi is described as a credit card sized computer. There are two available models but for this project Model B is used. The features on a Raspberry Pi are:
 \begin {itemize}
   \item ARM Processor capable of 700 MHz
@@ -92,13 +101,14 @@ The Raspberry Pi is described as a credit card sized computer. There are two ava
 	\caption{Raspberry Pi Model B board layout}
 \end {figure}
 
-
+\noindent
 {\bf Raspberry Pi Case:} \\ 
-
+\break
 Most Raspberry Pi's may not be sold with an external case. The case is essential because otherwise the Raspberry will have no protection and can get damaged very easily. A model B case is needed so there is space for the camera module to connect to the CSI connector on the Raspberry board. Model A did not have a space for the camera to connect so they have a different style case.\\
 \clearpage
+\noindent
 {\bf Raspberry Pi Camera Module:} \\
-
+\break
 The camera module is a camera that has been designed specifically for the Raspberry Pi. It connects directly into the pi to the CSI connector rather than USB. The CSI connector exclusively carries pixel data and because of this it is capable of extremely high data rates.\\
 
 The camera itself is not expensive yet it can output images and video of very high quality. For images the max resolution capable is 2592 x 1944. Video is capable of being captured in 1080p quality.\\
@@ -125,21 +135,23 @@ There is an infared filter on the camera and therefore it cannot detect IR. Ther
 	\caption{Camera Module attached to the Raspberry board with no casing}
 \end {figure}
 %{\vspace{5mm}}
+\noindent
 {\bf USB Hub powered externally:}\\
-
+\break
 A USB Hub is required to attach any USB components. If any component is connected by USB directly to the Pi, the Pi will power it. This will cause the Pi to heat up. If the Raspberry is left on for several hours, as this project aims to be, it could cause damage to the Pi. An externally powered USB hub will allow for the Pi to avoid heating up and create more USB slots available without affecting the Pi.\\ 
 
 No particular external USB hub is needed any USB hub can be used.\\
 
-
+\noindent
 {\bf Wifi Adapter:}\\
-
+\break
 When connecting to the internet a Wifi Adapter will be more useful then an Ethernet cable. By using an adapter it will avoid having to hide another cable and overall make the Pi neater to set up.\\
 
 Using a Wifi Adapter is not a requirement of this project but is more of a recommendation. This is a decision the end user will make.\\
 
+\noindent
 {\bf SD card:}\\
-
+\break
 An SD card will act as storage for the Pi. Most Raspberry Pi's do not come with an SD card and must be bought separately. The Raspberry Pi has no on board memory. An operating system will be loaded onto it and it will also store all images taken.\\
 
 External hard drives can also be used to store the images but that will be another decision left to the end user. The storage device chosen depends on how frequent the Raspberry Spi will be used.\\
@@ -157,37 +169,42 @@ The following is a list of all the software that will need to be installed:
   \item Motion
 \end {itemize}
 
+\noindent
 {\bf Operating System Raspian:}\\
-
+\break
 With the Raspberry Pi there are several operating systems to choose from. This project uses Raspian because it is the most popular OS for the Pi. Being the most popular it is easy to debug problems and solve issues that arise when searching online.\\ 
 
-
+\noindent
 {\bf UV4L (Universal Video 4 Linux):}\\
-
+\break
 The camera modules default driver is called RaspiCam. RaspiCam does not work properly with OpenCV. When OpenCV tries to locate a camera it looks for a device ID. The camera module does have a device ID but it's not an integer value. It's the value 'pi' because of this OpenCV cannot use the Camera Module with it's default drivers. To get around this driver problem UV4L (Universal Video 4 Linux) is used instead. UV4L allows OpenCV to locate and use the Camera.
 
 When using this driver the UV4L initializing script must be run. It can be added to the Raspberry's start up script or can be called after each boot. The parameters passed in can be interchangeable.\\
 
+\noindent
 {\bf OpenCV:}\\
-
+\break
 For all video and image processing the computer vision library OpenCV is used.\\
 
 OpenCV will be responsible for taking a real time photo and motion detection.\\
 
+\noindent
 {\bf Apache:}\\
-
+\break
 Apache web hosting will be used to host the Raspberry Spi website. Apache will continue running as a background process. While the Pi is handling motion detection, taking photos the website will be able to be accessed and process requests received.\\ 
 
+\noindent
 {\bf Motion:}\\
-
+\break
 Motion is a program that will handle the video live streaming. Motion can be configured in many ways. From which port the video will stream, how many FPS (frames per second) are displayed to whether the live stream should be saved.\\
 
 \section {Additional Requirements}	
 \label {sec:additional}
 Aside from the mentioned hardware and software mentioned in the previous section there are other requirements and additional features that an end user can user.\\
 
+\noindent
 {\bf Port Forwarding:}\\
-
+\break
 With the Raspberry Spi being set up on a home network port forwarding needs to be enabled. This project will not be able to work at all unless port forwarding is set up.\\
 
 Port forwarding will different for each end users router. For this reason no explanation will be given and the end user will need to consult their router manual or search for the answer online. \\
@@ -213,9 +230,9 @@ Port 22 is optional and will depend on how the end user will interact and make c
 
 Port 8000/9000 or 8080 is going to be used for live streaming. This port can be changed but will default to one of these ports. Changing the port that will be used for live streaming can be done in the Motion configuration file.\\
 
-
+\noindent
 {\bf A browser with JavaScript enabled:}\\
-
+\break
 This project has a JavaScript function. Due to using JavaScript a browser that has JavaScript needs to be used when viewing the website.\\
 
 If viewing the website on the Raspberry Pi itself the only browser currently that has JavaScript enabled is Chromium.\\
@@ -224,10 +241,29 @@ If viewing the website on the Raspberry Pi itself the only browser currently tha
 \chapter {Implementation}
 \label {ch:implem}
 % Website
-% Open CV 1-Motion 2-Real time photo
-% LiveStreaming
+\section {Web Application}
+\label {sec:webapp}
 % Help page
+How the site is made.
+<Screenshots of al pages>
+\section {Help Page}
+\label {sec:help}
+% Open CV 1-Motion 2-Real time photo
+Why add a help page. <Image of it>
+\section {Real Time Photo}
+\label {sec:photo}
+Explain opencv works. Why CGI and how that works. <Example image output>
+\section {Motion Detection}
+\label {sec:motion}
+% LiveStreaming
+Explain the motion detection <Example motion detection photos>
+\section {Video Live Streaming}
+\label {sec:video}
 % Future Possibilites
+Motion. How motion works. <Image to show how live streaming works>
+\section {Future Possibilities}
+\label {sec:future}
+Endless future possibilities. Audio/better livestreaming/setting up times to take photos/ automate site.
 \chapter {Testing}
 \label {ch:test}
 %
@@ -242,10 +278,11 @@ If viewing the website on the Raspberry Pi itself the only browser currently tha
 %
 %
 %
-\begin{small}
- The Raspberry Spi is a way to set up a home security system that is affordable, easy to hide and not complex. It can have multiple real life uses depending on the end user. Being set up on a home network allows for having full control over the system from who can access the Raspberry to the resolution of images being used. All of the Raspberry Spi code is available to download from github which allows for endless possibilities of additional extras.\\
+\begin {small}
+Raspberry Spi is a way to set up a home security system that is affordable, easy to hide and not complex. Various changes can be made to match each user depending on their preference. It can have multiple real life uses for varying end users. Being set up on a home network allows for having full control over the system from who can access the Raspberry to the resolution of images being used. All of the Raspberry Spi code is available to download from github which allows for endless possibilities of additional extras.\\
 
-{\bf Raspberry Spi Code is available here:\\}
+\noindent
+{\bf Raspberry Spi Code is available here:}\\
 {http://www.github.com/Smellen/RaspberrySpi}
 \end{small}
 
