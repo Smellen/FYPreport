@@ -244,26 +244,106 @@ If viewing the website on the Raspberry Pi itself the only browser currently tha
 \section {Web Application}
 \label {sec:webapp}
 % Help page
-How the site is made.
-<Screenshots of al pages>
+How the site is made.\\
+
+\begin {figure}[H]
+	\centering	
+	\includegraphics [scale=0.45]{../../Pictures/HomePage.jpg} 
+	\caption{Home page with menu of options\\}	
+\end {figure}
+
+
+
+
 \section {Help Page}
 \label {sec:help}
 % Open CV 1-Motion 2-Real time photo
 Why add a help page. <Image of it>
+A help page will be available on each page. It is there to answer problems that occurred most frequently when implementing and testing this project.\\
+
+The questions are also available in a .txt file in case the web page is not accessible.\\
+
+{The questions are:\\}
+
+\begin {itemize}
+  \item The camera doesn't open?
+  \item How does the motion detection work? 
+  \item The webpage is unavailable?
+  \item When taking a live frame the webpage displays "Frame not read correctly"?
+  \item How to SSH into the Raspberry Spi?
+  \item Only a partial image was taken while using motion detection?
+  \item where are the web pages stored on the pi?
+  \item Source code for the Raspberry Spi?
+  \item Question not here?
+\end {itemize}
+
+
+
+\begin {figure}[H]
+	\centering	
+	\includegraphics [scale=0.45]{../../Pictures/HelpPage.jpg} 
+	\caption{Help Page\\}	
+\end {figure}
+
+
 \section {Real Time Photo}
 \label {sec:photo}
+
 Explain opencv works. Why CGI and how that works. <Example image output>
+Taking a real time photo is an option that allows the user to take a photo with the click of a button and then view it. This photo is taken by using a Common Gateway Interface CGI script.\\
+
+CGI scripting is a way for a web user to click an option on a web page, the web server will then send the request server side where the application is then carried out. For this project the CGI application is done using C++.\\
+
+{\bf The CGI opens the camera and will return one of these three options.}
+
+
+\begin{enumerate}
+  \item The camera did not open successfully
+  \item The frame taken is empty
+  \item The frame has been read correctly\\
+\end{enumerate}  
+
+Only if the frame is successful will a proper web page load. If the camera doesn't open or the frame is empty is will display the error to the user.\\
+
+\begin {figure}[H]
+	\centering	
+	\includegraphics [scale=0.45]{../../Pictures/TakeLivePhoto.jpg} 
+	\caption{After taking a live frame\\}	
+\end {figure}
+
+
+
+
 \section {Motion Detection}
 \label {sec:motion}
 % LiveStreaming
-Explain the motion detection <Example motion detection photos>
+Motion detection is done by using the OpenCV library. The method chosen for motion detection is Absolute Difference. This method will detect changes happening after new frames are read in. This method was chosen because it is effective at detecting motion while not killing the pi.\\
+
+OpenCV has an inbuilt function called {\it absdiff()}. This method takes in two RGB frames. The two frames are then subtracted from one another producing a new RGB image that contains the differences if any. RGB images are not useful when looking for changes so the difference image is converted to grayscale. This means that the image will only contain black and white pixels making it easier to see if there are any changes from one frame to the next. If there are no changes the image will only contain black pixels. When there are changes white pixels will appear. The white pixels are counted and if there are more pixels then a certain count then motion has been detected.\\
+
+
+	{\it absdif(prevFrame - nextFrame = difference)\\}
+
+	{\it  grayscale(difference)\\}
+
+	{\it  checkWhiteCount (difference)	\\}
+	
+	{\it  if WhiteCount is above threshold save images	\\}
+
+
+If motion does get detected the RGB frames that were originally read in are saved. Since the difference image will not mean anything it does not get saved.\\
+
+If motion gets detected then the images are not saved and new images are read in.\\ 
+
 \section {Video Live Streaming}
 \label {sec:video}
 % Future Possibilites
-Motion. How motion works. <Image to show how live streaming works>
+Motion. How motion works.
+
 \section {Future Possibilities}
 \label {sec:future}
-Endless future possibilities. Audio/better livestreaming/setting up times to take photos/ automate site.
+Endless future possibilities. Audio/better live streaming/setting up times to take photos/ automate site.
+
 \chapter {Testing}
 \label {ch:test}
 %
@@ -275,7 +355,7 @@ Endless future possibilities. Audio/better livestreaming/setting up times to tak
 \label {ch:concl}
 %
 %
-%
+42
 %
 %
 \begin {small}
