@@ -4,6 +4,7 @@
 \usepackage{abstract}
 \usepackage{caption}
 \usepackage{float} 
+
      
 \begin {document}
 
@@ -12,11 +13,11 @@
 	\centering\
 	\textsc{\huge University of Dublin} \\ [1.5cm]
 
-\includegraphics [scale=0.5]{../../trinityCollege.jpg} \\[1.5cm]
+\includegraphics [scale=0.6]{../../trinityCollege.jpg} \\[1.5cm]
 	\textsc{\huge Trinity College}\\ [0.5cm]
 	\textsc{\large Raspberry Spi}\\ [0.5cm]
 
-Ellen Marie Burke  \\ B.A. (Mod.) Computer Science \\ Final Year Project April 2014 \\ Supervisor: Fergal Shevlin \\[1.5cm]
+Ellen Marie Burke  \\ B.A. (Mod.) Computer Science \\ Final Year Project April 2014 \\ Supervisor: Fergal Shevlin \\[2.0cm]
 
 	\textsc{\large School of Computer Science and Statistics} \\ 
 	\textsc{\large O'Reilly Institute, Trinity College, Dublin 2, Ireland} \\ 
@@ -39,7 +40,7 @@ I hereby declare that this project is entirely my own work and that it has not b
 
 \begin {abstract}
 	\textsc{\huge Abstract}  \\[1.0cm]
-	Security systems set up in homes can be expensive and complex to set up. The cameras used can be bulky in size and therefore difficult to successfully hide. This project is to create a home security system using a Raspberry Pi and the Raspberry Pi camera module.  
+	Security systems set up in homes can be expensive and complex to set up. The cameras used can be bulky in size and therefore difficult to successfully hide. This project is to create a home security system using a Raspberry Pi and the Raspberry Pi camera module.   
 \end {abstract}
 
 
@@ -47,16 +48,27 @@ I hereby declare that this project is entirely my own work and that it has not b
 \chapter {Introduction}
 \label {ch:intro} 
 
+Home security systems have been available for a few years now. Most are quite expensive and are very obvious to spot. The camera used in them may not be able to supply 1080p video.
+
 \section {Motivation/Problem}
 \label {sec:motprob}
 % Aim & What is Raspberry Spi?
-The aim of this project is to look at home security systems in a different way. The Raspberry Spi will allow users to set up a system and have complete control over it. It will allow for additional features to be used. 
+The aim of this project is to create a home security system in a different way. It will be affordable and easy to use for all kinds of end users.\\
+
+The Raspberry Spi will allow users to set up a system and have complete control over it. It will allow for additional features to be used and has endless possibilities of features that can be implemented as extras or change current features. 
 % How is it different from other security systems?
-Raspberry Spi differs from other security systems with regards to size and cost. 
+Raspberry Spi differs from other security systems with regards to size and cost. The Raspberry Spi approximately costs 30 Euro and the camera module is approximately 20 Euro. The dimensions of the Pi are 85.60mm x 56mm x 21mm. The camera module is even smaller in size.
 % 
-\section {Research Objectives}
-\label {sec:researchobj}
+\section {Background Research}
+\label {sec:research}
 Objective of the research is to \ldots
+
+\subsection {Android}
+\label {subsec:Android}
+The original idea was to create an Android app for the Raspberry Spi. From this the end user would control the Raspberry Spi. On the app the images would be viewed, motion would be started \& stopped and the live stream would be viewed.\\
+
+If an Android app had of been used this would mean that this project would only be useful to users who had access to an Android phone. This project would be unavailable to iPhone users, Windows users and users who would access it through a computer browser.
+
 \section {Technical Approach/Methodology}
 \label {sec:tech}
 Technical approach is \ldots
@@ -69,27 +81,27 @@ Technical approach is \ldots
 \section {Hardware}	
 \label {sec:hardware}
 
-The following is a list of hardware components necessary:\\
+The following is a list of hardware components:\\
 \begin {itemize}
-  \item Raspberry Pi Model B
-  \item Raspberry Pi Case
-  \item Raspberry Pi Camera Module
-  \item USB Hub powered externally
-  \item Wifi Adapter
-  \item SD card
+  \item Raspberry Pi Model B\\
+  \item Raspberry Pi Model B Case\\
+  \item Raspberry Pi Camera Module\\
+  \item USB Hub powered externally\\
+  \item Wifi Adapter\\
+  \item SD card\\
 \end {itemize} 
 
-\noindent
+\noindent\\
 {\bf Raspberry Pi Model B:} \\
 \break
 The Raspberry Pi is described as a credit card sized computer. There are two available models but for this project Model B is used. The features on a Raspberry Pi are:
 \begin {itemize}
-  \item ARM Processor capable of 700 MHz
-  \item 512 MB (Shared with the GPU)
-  \item HDMI
-  \item Composite RCA connector
-  \item CSI connector for the Raspberry Pi Camera
-  \item 2 USB ports
+  \item ARM Processor capable of 700 MHz\\
+  \item 512 MB (Shared with the GPU)\\
+  \item HDMI\\
+  \item Composite RCA connector\\
+  \item CSI connector for the Raspberry Pi Camera\\
+  \item 2 USB ports\\
   \item 3.5mm Audio Jack\\
 \end {itemize}
   
@@ -97,7 +109,7 @@ The Raspberry Pi is described as a credit card sized computer. There are two ava
 
 \begin {figure}[ht!]
 	\centering	
-	\includegraphics [scale=0.15]{../../Pictures/modelb.jpg}\\
+	\includegraphics [scale=0.23]{../../Pictures/modelb.jpg}\\
 	\caption{Raspberry Pi Model B board layout}
 \end {figure}
 
@@ -117,21 +129,17 @@ There is an infared filter on the camera and therefore it cannot detect IR. Ther
 
 
 % Reference Image: board + cam http://www.adafruit.com/products/1367
-% Both images from the site
+%
 % cam http://embeddedcomputer.nl/media/catalog/product/cache/1/image/650x650/9df78eab33525d08d6e5fb8d27136e95/r/a/raspberry_pi_camera_board.jpg
 
-%\begin {figure}[ht!]
-%	\centering	%
-	
-%\end {figure}
 \begin {figure}[H]
 	\centering	
-	\includegraphics [scale=0.4]{../../Pictures/raspberry_pi_camera_board.jpg} 
+	\includegraphics [scale=0.5]{../../Pictures/raspberry_pi_camera_board.jpg} 
 	\caption{Raspberry Pi Camera Module\\}	
 \end {figure}
 \begin {figure}[H]
 	\centering
-\includegraphics [scale=0.75]{../../Pictures/camattachedraspberry.jpg} 
+\includegraphics [scale=1.0]{../../Pictures/camattachedraspberry.jpg} 
 	\caption{Camera Module attached to the Raspberry board with no casing}
 \end {figure}
 %{\vspace{5mm}}
@@ -162,11 +170,11 @@ External hard drives can also be used to store the images but that will be anoth
 % Software required
 The following is a list of all the software that will need to be installed:
 \begin {itemize}
-  \item Operating System Raspian 
-  \item UV4L (Universal Video 4 Linux)  
-  \item OpenCV
-  \item Apache
-  \item Motion
+  \item Operating System Raspian \\
+  \item UV4L (Universal Video 4 Linux)\\  
+  \item OpenCV\\
+  \item Apache\\
+  \item Motion\\
 \end {itemize}
 
 \noindent
@@ -245,15 +253,29 @@ If viewing the website on the Raspberry Pi itself the only browser currently tha
 \label {sec:webapp}
 % Help page
 How the site is made.\\
+Once port forwarding has been set up the Raspberry Spi web application will be available on the external IP of the home network.
+
+{\bf List of options available from the homepage:}
+\begin {itemize}
+  \item View Photos Currently stored on the Pi\\
+  \item Take a real time photo\\
+  \item Start \& Stop Motion Detection\\
+  \item Video Live Streaming\\
+  \item Help Page\\
+\end {itemize}
 
 \begin {figure}[H]
 	\centering	
-	\includegraphics [scale=0.45]{../../Pictures/HomePage.jpg} 
-	\caption{Home page with menu of options\\}	
+	\includegraphics [scale=0.7]{../../Pictures/HomePage.jpg} 
+	\caption{Home page with list of options\\}	
 \end {figure}
 
+\subsection {Accessing the Web Application}
+\label {subsec:accesswebpage}
 
+Accessing the website will require a username and password to view any pages. The access is controlled by a .htaccess file. This file is an Apache configuration file. In this file it will store what will be displayed when asking for the password.\\
 
+Passwords are not kept in the same file or directory as the web pages. This is so they cannot be accessed on accident or viewed. The passwords and associated usersnames are stored in a .htpasswd \\
 
 \section {Help Page}
 \label {sec:help}
@@ -281,7 +303,7 @@ The questions are also available in a .txt file in case the web page is not acce
 
 \begin {figure}[H]
 	\centering	
-	\includegraphics [scale=0.45]{../../Pictures/HelpPage.jpg} 
+	\includegraphics [scale=0.7]{../../Pictures/HelpPage.jpg} 
 	\caption{Help Page\\}	
 \end {figure}
 
@@ -307,16 +329,17 @@ Only if the frame is successful will a proper web page load. If the camera doesn
 
 \begin {figure}[H]
 	\centering	
-	\includegraphics [scale=0.45]{../../Pictures/TakeLivePhoto.jpg} 
+	\includegraphics [scale=0.7]{../../Pictures/TakeLivePhoto.jpg} 
 	\caption{After taking a live frame\\}	
 \end {figure}
-
 
 
 
 \section {Motion Detection}
 \label {sec:motion}
 % LiveStreaming
+\subsection {How Motion Detection Works}
+\label {subsec:motionworks}
 Motion detection is done by using the OpenCV library. The method chosen for motion detection is Absolute Difference. This method will detect changes happening after new frames are read in. This method was chosen because it is effective at detecting motion while not killing the pi.\\
 
 OpenCV has an inbuilt function called {\it absdiff()}. This method takes in two RGB frames. The two frames are then subtracted from one another producing a new RGB image that contains the differences if any. RGB images are not useful when looking for changes so the difference image is converted to grayscale. This means that the image will only contain black and white pixels making it easier to see if there are any changes from one frame to the next. If there are no changes the image will only contain black pixels. When there are changes white pixels will appear. The white pixels are counted and if there are more pixels then a certain count then motion has been detected.\\
@@ -335,10 +358,43 @@ If motion does get detected the RGB frames that were originally read in are save
 
 If motion gets detected then the images are not saved and new images are read in.\\ 
 
+
+\subsection {Motion Detection Web Page}
+\label {subsec:motionwebpage}
+
+On the motion detection web page there are two options. Start motion and stop motion. If motion is currently running it will be displayed to the user.
+
+\begin {figure}[H]
+	\centering	
+	\includegraphics [scale=0.7]{../../Pictures/MotionDetectionStart.jpg} 
+	\caption{Motion Detection page\\}	
+\end {figure}
+
+\begin {figure}[H]
+	\centering	
+	\includegraphics [scale=0.7]{../../Pictures/MotionStarted.jpg} 
+	\caption{Motion Detection after being started\\}	
+\end {figure}
+
+\begin {figure}[H]
+	\centering	
+\includegraphics [scale=0.7]{../../Pictures/MotionStopped.jpg}
+	\caption{Motion Detection after being stopped\\}	
+\end {figure}
+
+
+
 \section {Video Live Streaming}
 \label {sec:video}
 % Future Possibilites
-Motion. How motion works.
+Motion. How motion(live streaming) works.
+Motion is a program that is available to download. It sets up a video stream and will display images from the camera attached to the Pi to a given web page. It can also offer to do motion detection but since is been implemented using OpenCV this aspect of Motion is not in use.\\
+
+Before Motion is used it is configured from how many frames it will display per second to the port the video is displayed on. Motion will take frames that are
+
+This feature currently does not work properly or efficiently.\\
+
+The video live streaming option on the home page of the web application does not start or stop streaming. It will display a blank page as to avoid effecting other features from working and effecting the pi connecting to the internet. Having this feature working properly would be an area of this project that could be expanded upon or changed in the future\\
 
 \section {Future Possibilities}
 \label {sec:future}
@@ -355,19 +411,41 @@ Endless future possibilities. Audio/better live streaming/setting up times to ta
 \label {ch:concl}
 %
 %
-42
+% 42
 %
 %
-\begin {small}
-Raspberry Spi is a way to set up a home security system that is affordable, easy to hide and not complex. Various changes can be made to match each user depending on their preference. It can have multiple real life uses for varying end users. Being set up on a home network allows for having full control over the system from who can access the Raspberry to the resolution of images being used. All of the Raspberry Spi code is available to download from github which allows for endless possibilities of additional extras.\\
+The aim of this project was to built a different kind of security system that is affordable and easy to use but also effective. Raspberry Spi has achieved this. It is an affordable set up that is easy to control. Users are able to view photos previously taken or captured from motion detection, live stream video or start and stop motion detection.\\
+
+Various changes can be made to match each user depending on their preference. It can have multiple real life uses for varying end users. Being set up on a home network allows for having full control over the system from who can access the Raspberry to the resolution of images being used.\\
+
+All of the Raspberry Spi code is available to download from github which allows for endless possibilities of additional extras.\\
 
 \noindent
 {\bf Raspberry Spi Code is available here:}\\
 {http://www.github.com/Smellen/RaspberrySpi}
-\end{small}
 
-%\begin {thebibliography}{9}
-  % type bibliography here
-%\end {thebibliography}	
+
+\subsection {Future Work}
+\label {subsec:future}
+
+The video streaming does not work well or efficiently. To continue working on this project this area would involve either a completely new approach or continue using the program Motion but try to implement it working better alongside Apache.\\
+
+Adding to this project even more would be adding in more Raspberry Pis. One Pi per room or as many as preferred. One Pi controlling the web page and the rest  only taking photos, motion detection and live streaming.\\ 
+
+%RaspberrySpi Logo
+\newpage
+\begin {figure}[H]
+	\centering	
+\includegraphics [scale=0.5]{../../Pictures/raspberrySPY.png} 
+\end {figure}
+
+
+
+\begin {thebibliography}{9}
+  %Example reference for later
+   \bibitem{notes} John W. Dower {\em Readings compiled for History
+  21.479.}  1991.
+
+\end {thebibliography}	
 
 \end {document} 
