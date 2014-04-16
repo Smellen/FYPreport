@@ -16,7 +16,6 @@
 \contentsline {subsection}{\numberline {3.4.1}How Motion Detection Works}{16}
 \contentsline {subsection}{\numberline {3.4.2}Motion Detection Web Page}{17}
 \contentsline {section}{\numberline {3.5}Video Live Streaming}{20}
-\contentsline {section}{\numberline {3.6}Future Possibilities}{21}
 \contentsline {chapter}{\numberline {4}Testing}{22}
 \contentsline {chapter}{\numberline {5}Conclusion}{23}
 \contentsline {subsection}{\numberline {5.0.1}Future Work}{23}

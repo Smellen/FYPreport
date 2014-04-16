@@ -4,7 +4,7 @@
 \usepackage{abstract}
 \usepackage{caption}
 \usepackage{float} 
-
+\usepackage{subcaption}
      
 \begin {document}
 
@@ -273,14 +273,13 @@ Once port forwarding has been set up the Raspberry Spi web application will be a
 \subsection {Accessing the Web Application}
 \label {subsec:accesswebpage}
 
-Accessing the website will require a username and password to view any pages. The access is controlled by a .htaccess file. This file is an Apache configuration file. In this file it will store what will be displayed when asking for the password.\\
+Accessing the website will require a username and password to view any pages. The access is controlled by a .htaccess file. This file is an Apache configuration file. In this file it will store what will be displayed when asking for the password. Currently the only information that will displayed to the user before they enter a user name or password is the words Raspberry Spi to let the user know what they are logging in to.\\
 
-Passwords are not kept in the same file or directory as the web pages. This is so they cannot be accessed on accident or viewed. The passwords and associated usersnames are stored in a .htpasswd \\
+Passwords are not kept in the same file or directory as the web pages. This is so they cannot be accessed on accident or viewed. The passwords and associated user names are stored in a .htpasswd. The passwords are encrypted and cannot be read. If a user would like to add a user or password it will need to be added from the actual Pi not the web application. The web application will provide no hints to password or user name or any way to change either. This is done to avoid malicious attempts to access the Raspberry.\\
 
 \section {Help Page}
 \label {sec:help}
-% Open CV 1-Motion 2-Real time photo
-Why add a help page. <Image of it>
+
 A help page will be available on each page. It is there to answer problems that occurred most frequently when implementing and testing this project.\\
 
 The questions are also available in a .txt file in case the web page is not accessible.\\
@@ -362,7 +361,32 @@ If motion gets detected then the images are not saved and new images are read in
 \subsection {Motion Detection Web Page}
 \label {subsec:motionwebpage}
 
-On the motion detection web page there are two options. Start motion and stop motion. If motion is currently running it will be displayed to the user.
+On the motion detection web page there are two options. Start motion and stop motion. If motion is currently running it will be displayed to the user. There will be text displaying if the motion is on or off and a small icon will appear as well.\\
+
+
+
+\begin{figure}[htbp]
+  \begin{minipage}[b]{0.62\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{../../Pictures/raspberrySPYstart.png} 
+    \caption{Motion Detection Start icon}
+    \label{fig:start}
+  \end{minipage}
+  \hspace{0.5cm}
+  \begin{minipage}[b]{0.62\linewidth}
+    \centering
+    \includegraphics[width=\linewidth]{../../Pictures/raspberrySPYstop.png} 
+    \caption{Motion Detection Stop icon}
+    \label{fig:stop}
+  \end{minipage}
+\end{figure}
+
+
+
+
+
+
+{\bf Screenshots from the motion detection area on the web application\\}
 
 \begin {figure}[H]
 	\centering	
@@ -396,9 +420,6 @@ This feature currently does not work properly or efficiently.\\
 
 The video live streaming option on the home page of the web application does not start or stop streaming. It will display a blank page as to avoid effecting other features from working and effecting the pi connecting to the internet. Having this feature working properly would be an area of this project that could be expanded upon or changed in the future\\
 
-\section {Future Possibilities}
-\label {sec:future}
-Endless future possibilities. Audio/better live streaming/setting up times to take photos/ automate site.
 
 \chapter {Testing}
 \label {ch:test}
@@ -422,7 +443,7 @@ All of the Raspberry Spi code is available to download from github which allows 
 
 \noindent
 {\bf Raspberry Spi Code is available here:}\\
-{http://www.github.com/Smellen/RaspberrySpi}
+{\\http://www.github.com/Smellen/RaspberrySpi}
 
 
 \subsection {Future Work}
