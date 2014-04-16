@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.4.14)  16 APR 2014 18:04
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.4.14)  16 APR 2014 21:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -151,7 +151,14 @@ Package: subcaption 2013/02/03 v1.1-62 Sub-captions (AR)
 \c@subfigure=\count103
 \c@subtable=\count104
 )
-(./RaspberrySpiReport.aux)
+(./RaspberrySpiReport.aux
+
+LaTeX Warning: Label `fig:start' multiply defined.
+
+
+LaTeX Warning: Label `fig:stop' multiply defined.
+
+)
 \openout1 = `RaspberrySpiReport.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
@@ -166,8 +173,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
 LaTeX Font Info:    ... okay on input line 9.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
 LaTeX Font Info:    ... okay on input line 9.
-
-(/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+ (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count105
 \scratchdimen=\dimen121
@@ -416,7 +422,7 @@ Overfull \hbox (16.34912pt too wide) in paragraph at lines 142--143
 
 [7
 
- <../../Pictures/raspberry_pi_camera_board.jpg>]
+] [8 <../../Pictures/raspberry_pi_camera_board.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 146--150
 
  []
@@ -456,12 +462,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 160--164
 
  []
 
-[8 <../../Pictures/camattachedraspberry.jpg>]
+[9 <../../Pictures/camattachedraspberry.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 165--166
 
  []
 
-
+[10]
 Underfull \hbox (badness 10000) in paragraph at lines 173--174
 
  []
@@ -506,7 +512,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 190--191
 
  []
 
-[9]
+
 Underfull \hbox (badness 10000) in paragraph at lines 192--196
 
  []
@@ -531,7 +537,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 199--203
 
  []
 
+[11
 
+]
 Underfull \hbox (badness 10000) in paragraph at lines 204--208
 
  []
@@ -541,68 +549,65 @@ Underfull \hbox (badness 10000) in paragraph at lines 204--208
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 211--212
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 213--217
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 212--213
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 213--217
+Underfull \hbox (badness 10000) in paragraph at lines 214--218
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 218--219
+Underfull \hbox (badness 10000) in paragraph at lines 214--218
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 220--221
-
- []
-
-[10]
-Underfull \hbox (badness 10000) in paragraph at lines 235--236
+Underfull \hbox (badness 10000) in paragraph at lines 219--220
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 237--238
+Underfull \hbox (badness 10000) in paragraph at lines 221--222
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 239--240
+Underfull \hbox (badness 10000) in paragraph at lines 236--237
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 241--245
+Underfull \hbox (badness 10000) in paragraph at lines 238--239
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 241--245
+Underfull \hbox (badness 10000) in paragraph at lines 240--241
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 246--249
+Underfull \hbox (badness 10000) in paragraph at lines 242--246
 
  []
 
-[11]
+
+Underfull \hbox (badness 10000) in paragraph at lines 242--246
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 247--250
+
+ []
+
+[13
+
+] [14]
 Chapter 3.
-
-Underfull \hbox (badness 10000) in paragraph at lines 260--261
-
- []
-
 
 Underfull \hbox (badness 10000) in paragraph at lines 261--262
 
@@ -623,217 +628,237 @@ Underfull \hbox (badness 10000) in paragraph at lines 264--265
 
  []
 
-<../../Pictures/HomePage.jpg, id=59, 547.2947pt x 500.62032pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 265--266
+
+ []
+
+<../../Pictures/HomePage.jpg, id=68, 547.2947pt x 500.62032pt>
 File: ../../Pictures/HomePage.jpg Graphic file (type jpg)
 
 <use ../../Pictures/HomePage.jpg>
-Package pdftex.def Info: ../../Pictures/HomePage.jpg used on input line 269.
+Package pdftex.def Info: ../../Pictures/HomePage.jpg used on input line 270.
 (pdftex.def)             Requested size: 383.10367pt x 350.43182pt.
 
-Overfull \hbox (38.10367pt too wide) in paragraph at lines 269--270
+Overfull \hbox (38.10367pt too wide) in paragraph at lines 270--271
  [][] 
  []
 
-[12
+[15
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 276--277
+Underfull \hbox (badness 10000) in paragraph at lines 277--278
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 278--279
+Underfull \hbox (badness 10000) in paragraph at lines 279--280
 
  []
 
-[13 <../../Pictures/HomePage.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 283--284
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 285--286
+[16 <../../Pictures/HomePage.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 284--285
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 287--288
+Underfull \hbox (badness 10000) in paragraph at lines 286--287
 
  []
 
-<../../Pictures/HelpPage.jpg, id=66, 560.8453pt x 487.06969pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 288--289
+
+ []
+
+<../../Pictures/HelpPage.jpg, id=76, 560.8453pt x 487.06969pt>
 File: ../../Pictures/HelpPage.jpg Graphic file (type jpg)
 
 <use ../../Pictures/HelpPage.jpg>
-Package pdftex.def Info: ../../Pictures/HelpPage.jpg used on input line 305.
+Package pdftex.def Info: ../../Pictures/HelpPage.jpg used on input line 306.
 (pdftex.def)             Requested size: 392.58904pt x 340.94644pt.
 
-Overfull \hbox (47.58904pt too wide) in paragraph at lines 305--306
+Overfull \hbox (47.58904pt too wide) in paragraph at lines 306--307
  [][] 
  []
 
-[14]
-Underfull \hbox (badness 10000) in paragraph at lines 313--315
+[17]
+Underfull \hbox (badness 10000) in paragraph at lines 314--316
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 316--317
+Underfull \hbox (badness 10000) in paragraph at lines 317--318
 
  []
 
-[15 <../../Pictures/HelpPage.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 324--325
+[18 <../../Pictures/HelpPage.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 325--326
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 327--328
+Underfull \hbox (badness 10000) in paragraph at lines 328--329
 
  []
 
-<../../Pictures/TakeLivePhoto.jpg, id=74, 544.28343pt x 446.41782pt>
+<../../Pictures/TakeLivePhoto.jpg, id=83, 544.28343pt x 446.41782pt>
 File: ../../Pictures/TakeLivePhoto.jpg Graphic file (type jpg)
 
 <use ../../Pictures/TakeLivePhoto.jpg>
 Package pdftex.def Info: ../../Pictures/TakeLivePhoto.jpg used on input line 33
-1.
+2.
 (pdftex.def)             Requested size: 380.9958pt x 312.49033pt.
 
-Overfull \hbox (35.9958pt too wide) in paragraph at lines 331--332
+Overfull \hbox (35.9958pt too wide) in paragraph at lines 332--333
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 342--343
+Underfull \hbox (badness 10000) in paragraph at lines 343--344
 
  []
 
-[16 <../../Pictures/TakeLivePhoto.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 344--345
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 347--348
+[19 <../../Pictures/TakeLivePhoto.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 345--346
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 349--350
+Underfull \hbox (badness 10000) in paragraph at lines 348--349
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 351--352
+Underfull \hbox (badness 10000) in paragraph at lines 350--351
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 353--354
+Underfull \hbox (badness 10000) in paragraph at lines 352--353
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 356--357
+Underfull \hbox (badness 10000) in paragraph at lines 354--355
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 358--359
+Underfull \hbox (badness 10000) in paragraph at lines 357--358
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 364--365
+Underfull \hbox (badness 10000) in paragraph at lines 360--361
 
  []
 
-<../../Pictures/raspberrySPYstart.png, id=78, 602.25pt x 401.5pt>
+<../../Pictures/prevFrame.png, id=87, 321.2pt x 240.9pt>
+File: ../../Pictures/prevFrame.png Graphic file (type png)
+
+<use ../../Pictures/prevFrame.png>
+Package pdftex.def Info: ../../Pictures/prevFrame.png used on input line 368.
+(pdftex.def)             Requested size: 208.77753pt x 156.58313pt.
+
+Overfull \hbox (36.27753pt too wide) in paragraph at lines 368--369
+ [][] 
+ []
+
+<../../Pictures/nextFrame.png, id=88, 321.2pt x 240.9pt>
+File: ../../Pictures/nextFrame.png Graphic file (type png)
+
+<use ../../Pictures/nextFrame.png>
+Package pdftex.def Info: ../../Pictures/nextFrame.png used on input line 375.
+(pdftex.def)             Requested size: 208.77753pt x 156.58313pt.
+
+Overfull \hbox (36.27753pt too wide) in paragraph at lines 375--376
+ [][] 
+ []
+
+
+Overfull \hbox (18.67079pt too wide) in paragraph at lines 366--379
+[][]   [] 
+ []
+
+[20] <../../Pictures/differenceImage.png, id=93, 321.2pt x 240.9pt>
+File: ../../Pictures/differenceImage.png Graphic file (type png)
+
+<use ../../Pictures/differenceImage.png>
+Package pdftex.def Info: ../../Pictures/differenceImage.png used on input line 
+385.
+(pdftex.def)             Requested size: 208.77753pt x 156.58313pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 393--394
+
+ []
+
+<../../Pictures/raspberrySPYstart.png, id=94, 602.25pt x 401.5pt>
 File: ../../Pictures/raspberrySPYstart.png Graphic file (type png)
 
 <use ../../Pictures/raspberrySPYstart.png>
 Package pdftex.def Info: ../../Pictures/raspberrySPYstart.png used on input lin
-e 371.
+e 400.
 (pdftex.def)             Requested size: 213.89832pt x 142.59781pt.
 
-<../../Pictures/raspberrySPYstop.png, id=80, 602.25pt x 401.5pt>
+<../../Pictures/raspberrySPYstop.png, id=96, 602.25pt x 401.5pt>
 File: ../../Pictures/raspberrySPYstop.png Graphic file (type png)
 
 <use ../../Pictures/raspberrySPYstop.png>
 Package pdftex.def Info: ../../Pictures/raspberrySPYstop.png used on input line
- 378.
+ 407.
 (pdftex.def)             Requested size: 213.89832pt x 142.59781pt.
 
-Overfull \hbox (101.46742pt too wide) in paragraph at lines 369--382
+Overfull \hbox (101.46742pt too wide) in paragraph at lines 398--411
 [][]   [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 389--390
+Underfull \hbox (badness 10000) in paragraph at lines 415--416
 
  []
 
-<../../Pictures/MotionDetectionStart.jpg, id=81, 556.32843pt x 371.13657pt>
+<../../Pictures/MotionDetectionStart.jpg, id=97, 556.32843pt x 371.13657pt>
 File: ../../Pictures/MotionDetectionStart.jpg Graphic file (type jpg)
 
 <use ../../Pictures/MotionDetectionStart.jpg>
 Package pdftex.def Info: ../../Pictures/MotionDetectionStart.jpg used on input 
-line 393.
+line 419.
 (pdftex.def)             Requested size: 389.42725pt x 259.79381pt.
 
-Overfull \hbox (44.42725pt too wide) in paragraph at lines 393--394
+Overfull \hbox (44.42725pt too wide) in paragraph at lines 419--420
  [][] 
  []
 
-[17] <../../Pictures/MotionStarted.jpg, id=86, 556.32843pt x 422.32782pt>
+[21 <../../Pictures/prevFrame.png (PNG copy)> <../../Pictures/nextFrame.png (PN
+G copy)> <../../Pictures/differenceImage.png (PNG copy)>]
+<../../Pictures/MotionStarted.jpg, id=102, 556.32843pt x 422.32782pt>
 File: ../../Pictures/MotionStarted.jpg Graphic file (type jpg)
 
 <use ../../Pictures/MotionStarted.jpg>
-Package pdftex.def Info: ../../Pictures/MotionStarted.jpg used on input line 39
-9.
+Package pdftex.def Info: ../../Pictures/MotionStarted.jpg used on input line 42
+5.
 (pdftex.def)             Requested size: 389.42725pt x 295.62746pt.
 
-Overfull \hbox (44.42725pt too wide) in paragraph at lines 399--400
+Overfull \hbox (44.42725pt too wide) in paragraph at lines 425--426
  [][] 
  []
 
-[18 <../../Pictures/raspberrySPYstart.png> <../../Pictures/raspberrySPYstop.png
+[22 <../../Pictures/raspberrySPYstart.png> <../../Pictures/raspberrySPYstop.png
 > <../../Pictures/MotionDetectionStart.jpg>]
-<../../Pictures/MotionStopped.jpg, id=92, 530.73282pt x 434.37282pt>
+<../../Pictures/MotionStopped.jpg, id=108, 530.73282pt x 434.37282pt>
 File: ../../Pictures/MotionStopped.jpg Graphic file (type jpg)
 
 <use ../../Pictures/MotionStopped.jpg>
-Package pdftex.def Info: ../../Pictures/MotionStopped.jpg used on input line 40
-5.
+Package pdftex.def Info: ../../Pictures/MotionStopped.jpg used on input line 43
+1.
 (pdftex.def)             Requested size: 371.51044pt x 304.0589pt.
 
-Overfull \hbox (26.51044pt too wide) in paragraph at lines 405--406
+Overfull \hbox (26.51044pt too wide) in paragraph at lines 431--432
  [][] 
  []
 
-[19 <../../Pictures/MotionStarted.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 414--416
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 419--420
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 421--422
-
- []
-
-[20 <../../Pictures/MotionStopped.jpg>] [21]
-Chapter 4.
-[22
-
-]
-Chapter 5.
-
+[23 <../../Pictures/MotionStarted.jpg>]
 Underfull \hbox (badness 10000) in paragraph at lines 438--439
 
  []
@@ -844,47 +869,88 @@ Underfull \hbox (badness 10000) in paragraph at lines 440--441
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 442--443
+Underfull \hbox (badness 10000) in paragraph at lines 446--448
+
+ []
+
+[24 <../../Pictures/MotionStopped.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 451--452
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 444--447
+Underfull \hbox (badness 10000) in paragraph at lines 453--454
+
+ []
+
+[25]
+Chapter 4.
+[26
+
+]
+Chapter 5.
+
+Underfull \hbox (badness 10000) in paragraph at lines 470--471
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 452--453
+Underfull \hbox (badness 10000) in paragraph at lines 472--473
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 454--455
+Underfull \hbox (badness 10000) in paragraph at lines 474--475
 
  []
 
-[23
 
-] <../../Pictures/raspberrySPY.png, id=109, 602.25pt x 401.5pt>
+Underfull \hbox (badness 10000) in paragraph at lines 476--479
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 484--485
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 486--487
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 488--489
+
+ []
+
+[27
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 490--491
+
+ []
+
+[28] <../../Pictures/raspberrySPY.png, id=128, 602.25pt x 401.5pt>
 File: ../../Pictures/raspberrySPY.png Graphic file (type png)
 
 <use ../../Pictures/raspberrySPY.png>
-Package pdftex.def Info: ../../Pictures/raspberrySPY.png used on input line 460
+Package pdftex.def Info: ../../Pictures/raspberrySPY.png used on input line 496
 .
 (pdftex.def)             Requested size: 301.12425pt x 200.7495pt.
- [24 <../../Pictures/raspberrySPY.png>]
-[25
+ [29 <../../Pictures/raspberrySPY.png>]
+[30
 
 ] (./RaspberrySpiReport.aux)
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3400 strings out of 494985
- 52105 string characters out of 6180356
- 109528 words of memory out of 5000000
- 6578 multiletter control sequences out of 15000+600000
+ 3416 strings out of 494985
+ 52591 string characters out of 6180356
+ 109581 words of memory out of 5000000
+ 6591 multiletter control sequences out of 15000+600000
  8073 words of font info for 29 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  38i,8n,38p,721b,335s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -894,10 +960,10 @@ e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on RaspberrySpiReport.pdf (29 pages, 1631127 bytes).
+Output written on RaspberrySpiReport.pdf (34 pages, 1794712 bytes).
 PDF statistics:
- 138 PDF objects out of 1000 (max. 8388607)
- 84 compressed objects within 1 object stream
+ 157 PDF objects out of 1000 (max. 8388607)
+ 95 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 66 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 81 words of extra memory for PDF output out of 10000 (max. 10000000)
 
