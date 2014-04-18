@@ -53,25 +53,43 @@ Home security systems have been available for a few years now. Most are quite ex
 \section{Motivation/Problem}
 \label{sec:motprob}
 % Aim & What is Raspberry Spi?
-The aim of this project is to create a home security system in a different way. It will be affordable and easy to use for all kinds of end users.\\
+The aim of this project is to create a home security system that is affordable, easy to setup and use by anyone. It will be affordable and easy to use for all kinds of end users.\\
 
-The Raspberry Spi will allow users to set up a system and have complete control over it. It will allow for additional features to be used and has endless possibilities of features that can be implemented as extras or change current features. 
-% How is it different from other security systems?
-Raspberry Spi differs from other security systems with regards to size and cost. The Raspberry Spi approximately costs 30 Euro and the camera module is approximately 20 Euro. The dimensions of the Pi are 85.60mm x 56mm x 21mm. The camera module is even smaller in size.
+The Raspberry Spi will allow users to set up a system and have complete control over it. It has endless possibilities of features that can be implemented as extras or change current features.\\
+
+Raspberry Spi is different from other security systems with regards to size, cost and the control a user has over it. The Raspberry Spi approximately costs 30 Euro and the camera module is approximately 20 Euro. The dimensions of the Pi are 85.60mm x 56mm x 21mm. The camera module is even smaller.
+
+This project could be used for multiple real life uses and applications. It is specifically aimed at being used at home but it could be used elsewhere as well.
+
+\begin{itemize}
+  \item A user who is out working all day and they would like to know what their pet is getting up to throughout the day.\\
+  \item Keeping an eye on small children while at home with them.\\
+  \item Simply checking on a home throughout the day.\\
+\end{itemize}
 % 
 \section{Background Research}
 \label{sec:research}
-Objective of the research is to \ldots
 
-\subsection{Android}
+The objective of background research was to see what features current surveillance systems have that are effective and popular and to see which of these features can be used for this project.\\
+
+Most security systems have the ability to live stream a video. Some systems this is the their only feature and it would have the ability to record the entire footage. This can sometimes be a waste because no useful information can be gotten from the footage or simply nothing happens that would need to be recorded. For this project live streaming is a feature but the live stream footage by default is not saved. This can be changed however if the user wishes.\\
+Another popular feature is motion detection. Instead of live streaming motion detection would be constantly running and only when a change occurs will the images get saved. \\
+
+Before this project Security systems could be bought either pre made or built by a person using a web camera. For a pre built home security system it just need to be set up and users could watch a feed that was provided. But it gave no control to the user. No changes could be made or features added to it. The downside to a prebuilt system would be that they can become quite expensive acquire, maintain and repair if needed. The camera used would not be able to he hidden due to it’s size and the system being prebuilt will not allow any customization made to it or even have features added.\\
+
+Systems made at home that a user could create and set up themselves usually consist of a desktop or laptop with a USB connected webcam or simply just a IP camera which can be remotely accessed. Web cameras and IP cameras can be expensive and the higher the quality desired the higher the cost of them will be.  But like pre built systems the user may not have control over them depending on the software used. \\ 
+
+\subsection{Mobile App or Web Application}
 \label{subsec:Android}
-The original idea was to create an Android app for the Raspberry Spi. From this the end user would control the Raspberry Spi. On the app the images would be viewed, motion would be started \& stopped and the live stream would be viewed.\\
+The original concept was to create an Android app for the Raspberry Spi simply because apps are very popular these days. From this app the end user would control the Raspberry Spi. On the app the images would be viewed, motion would be started \& stopped and the video footage of the live stream could be viewed. \\
 
-If an Android app had of been used this would mean that this project would only be useful to users who had access to an Android phone. This project would be unavailable to iPhone users, Windows users and users who would access it through a computer browser.
+If an Android app had of been used this would mean that this project would only be useful to users who had access to an Android phone. This project would be unavailable to iPhone users, Windows users and users who would prefer to access it through a computer's web browser.\\
 
-\section{Technical Approach/Methodology}
-\label{sec:tech}
-Technical approach is \ldots
+Therefore the decision to make this project accessible on a web application would mean that no user would be unable to use this project and it would be available to all. It also reduces one element of setting up the Raspberry Spi. No app needs to be downloaded and configured.\\
+
+%\section{Technical Approach/Methodology}
+%\label{sec:tech}
+%Technical approach is \ldots
 % 
 \chapter{Design}
 \label{ch:design}
@@ -457,9 +475,48 @@ The video live streaming option on the home page of the web application does not
 \label{ch:test}
 %
 %
+\subsection{Testing Motion Detection}
+\label{subsec:motionTest}
 %
+To get motion detection working effectively while not overpowering the Pi causing it to be unable to process anything else took some testing to get it just right. Motion Detection on a computer not a Pi would usually read in every frame from a video stream and would process each of the frames looking for motion. The Pi would be capable of such a task but for this project the Pi is expected to keep a website running and be able to process requests that it receives all while the motion detection is running.\\
+
+ To do this not every frame is read in but finding out the correct number of frames to skip and still be able to detect motion is where most of the testing took place. The same object of a book was used for each test. It was held in front of the camera and moved from one side of the frame to the other. The test was started at skip ten frames and read in that frame. Skipping ten frames was unsuccessful as it never caught any motion. If it did it only caught the end which is not very useful. \\
+
+Ten frames was reduced down to five frames and the test was repeated. It proved to work much better but it still didn’t catch all motion that was happening. Again the frames being skipped was reduced down to three frames. This test proved to be the most successful as motion was detected much better and it did not interfere with the web application. \\
+
+The frames were reduced to having no skips but then motion detection started interfering with the web application and making the web pages have a delay in being displayed. This proved that skipping a set amount of frames helps.\\
+
+\subsection{Testing Raspberry Spi Web Application}
+\label{subsec:websiteTest}
 %
+After motion detection was found to be working as planned and correctly the website was tested to see if the Pi was still able to process requests while motion detection was running in the background.\\
+
+For this test motion detection was started and different test users were asked to log into the website and go through all the images stored on the Pi. Objects were then moved on front of the camera so that motion detection would start saving images.\\ 
+
+From this test images from the motion detection were successfully saved and no user had any issues or delays logging in or in accessing the photos\\
+
+
+\subsection{Testing Real Time Photo}
+\label{subsec:realPhotoTest}
 %
+
+Testing a real time photo was done by placing different objects on front of the camera and when a real time photo was taken seeing if they would appear. \\
+
+All photos are saved with a timestamp but this test was to ensure that the photo was in fact recently taken but the image was updating when being viewed on the webpage.\\
+
+
+\subsection{Testing Live Streaming}
+\label{subsec:liveStreamTest}
+%
+Live Streaming was tested not using the web application but on a localhost connection. To test if the stream was live and if the the frames per second (FPS) were correct I walked from one side of the frame to the other. 
+Live streaming was tested with the website as well but it caused several issues from taking down Apache and causing the web page to be unavailable to effecting the wifi connection on the Pi.
+
+\subsection{Testing Photo Storage}
+\label{subsec:photoStorageTest}
+%
+To test if photos were being stored on the Pi real time photos were taken and the time was taken  so the it could be compared to the timestamp. The web address where all photos are stored was checked to see if the image appeared with the correct time stamp and the expected photo appeared. All photos taken from either feature appeared in a swift manner available to be viewed. Timestamps and dates on each photo were also always correct.\\
+
+
 \chapter{Conclusion}
 \label{ch:concl}
 %
@@ -472,7 +529,7 @@ The aim of this project was to built a different kind of security system that is
 Various changes can be made to match each user depending on their preference. It can have multiple real life uses for varying end users. Being set up on a home network allows for having full control over the system from who can access the Raspberry to the resolution of images being used.\\
 
 All of the Raspberry Spi code is available to download from github which allows for endless possibilities of additional extras.\\
-
+% \cite{notes}
 \noindent
 {\bf Raspberry Spi Code is available here:}\\
 {\\http://www.github.com/Smellen/RaspberrySpi}
