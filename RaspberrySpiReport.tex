@@ -311,15 +311,15 @@ This issue is only going to affect the user if they view the website on the Pi i
 \section{Web Application}
 \label{sec:webapp}
 % Help page
-All of the pages on the website have been created using HTML and styled by using CSS. All pages use the same CSS style so that the website is consistent and the layout doesn't change as to not confuse the user.\\
+All of the pages on the website have been created using HTML and styled by using CSS. All pages use the same CSS style so that the website is consistent and the layout doesn't change so as to not confuse the user.\\
 
-Once port forwarding has been set up the Raspberry Spi web application will be available on the external IP of the home network. The page will not be accesible until a correct user name and password is entered.\\
+Once port forwarding has been set up the Raspberry Spi web application will be available on the external IP of the home network. The page will not be accessible until a correct user name and password is entered.\\
 
 {\bf A list of options available from the homepage:}
 \begin{itemize}
   \item View Photos Currently stored on the Pi\\
   \item Take a real time photo\\
-  \item Start \& Stop Motion Detection\\
+  \item Start and Stop Motion Detection\\
   \item Video Live Streaming\\
   \item Help Page (Footer available on every page)\\
 \end{itemize}
@@ -333,31 +333,30 @@ Once port forwarding has been set up the Raspberry Spi web application will be a
 \subsection{Accessing the Web Application}
 \label{subsec:accesswebpage}
 
-Accessing the website will require a user name and password to view any pages. The access of the site is controlled by a .htaccess file. This file is an Apache configuration file. In this file it will store what will be displayed when asking for the password. Currently the only information that will displayed to the user before they enter a user name or password is the words Raspberry Spi to let the user know what they are logging in to. \\
+Accessing the website will require a user name and password to view any pages. The access of the site is controlled by a .htaccess file. This file is an Apache configuration file. This file stores what will be displayed when asking for the password. Currently the only information that will be displayed to the user before they enter a user name or password is the words 'Raspberry Spi' to let the user know what they are logging in to. \\
 
-Passwords are not kept in the same file or directory as the web pages. This is so they cannot be accessed by accident, viewed by accident or edited maliciously. The passwords and associated user names are stored in a .htpasswd. The passwords are encrypted and are not human readable. If a user would like to add a user name or password it will need to be added from the actual Pi not the web application. This is done to stop any fake attempts at accessing the site or spam requests being sent to the Pi. The web application will provide no hints to passwords or user names or any way to change either.\\
+Passwords are not kept in the same file or directory as the web pages. This is to prevent them from being accessed by accident, viewed by accident or edited maliciously. The passwords and associated user names are stored in a .htpasswd. The passwords are encrypted and are not human readable. If a user would like to add a user name or password it will need to be added from the actual Pi not the web application. This is done to stop any fake attempts at accessing the site or spam requests being sent to the Pi. The web application will provide no hints to passwords or user names or any way to change either.\\
 
 \section{Help Page}
 \label{sec:help}
 
-A help page will be available in the footer on each page. It is there to give answers to problems that occurred most frequently when implementing and testing this project.\\
+A help page will be available in the footer on each web page. It is there to give answers to problems that occurred most frequently when implementing and testing this project.\\
 
-The questions are also available in a .txt file in case the web page is not accessible or a user would like to add to it.\\
+The questions are also available in a .txt file in case the web page is not accessible or a user would like to add more information to it.\\
 
-{The questions are:\\}
+{The questions on the help page currently are:\\}
 
 \begin{itemize}
   \item The camera doesn't open?\\
   \item How does the motion detection work? \\
-  \item The webpage is unavailable?\\
-  \item When taking a live frame the webpage displays "Frame not read correctly"?\\
+  \item The web page is unavailable?\\
+  \item When taking a live frame the web page displays "Frame not read correctly"?\\
   \item How to SSH into the Raspberry Spi?\\
   \item Only a partial image was taken while using motion detection?\\
-  \item where are the web pages stored on the pi?\\
+  \item Where are the web pages stored on the Pi?\\
   \item Source code for the Raspberry Spi?\\
   \item Question not here?\\
 \end{itemize}
-
 
 
 \begin{figure}[H]
@@ -373,15 +372,17 @@ The questions are also available in a .txt file in case the web page is not acce
 
 Taking a real time photo is an option that allows the user to take a photo with the click of a button and then view it on the web page. This photo is taken by using a Common Gateway Interface (CGI) script.\\
 
-Common Gateway Interface scripting is a way for a web user to click an option on a web page, the web server will then send the request server side where the application is then carried out. CGI scripts are stored in a .cgi file. For this project the CGI application is done using the language C++. When the C++ program is compiled the output of the program is set to a .cgi file\\
+Common Gateway Interface scripting is a way for a web user to click an option on a web page, the web server will then send that request server side where the application is then carried out. CGI scripts are stored in a .cgi file. For this project the CGI application uses the language C++. When the C++ program is compiled the output of this program is set to a .cgi file\\
 
 An example of this would be:\\
 
 \textbf{\textit{g++ realTimePhoto.cpp -o realTimePhoto.cgi\\ }}
 
-So when a user selects to take a real time photo that request is then sent to the Pi and it is asking to run the real time photo CGI script. The C++ program is then run and the results are returned and displayed on the web page. The layout and results shown to the user are taken from the C++ program.\\
+So when a user selects to take a real time photo, that request is then sent to the Pi and it is asking to run the real time photo CGI script. The C++ program is then run and the results are returned and displayed on the web page. The layout and results shown to the user are taken from the C++ program.\\
 
-{\bf The CGI opens the camera and will return one of these three options.}
+Any changes that are made to the C++ program will require compilation to happen again.\\
+
+The CGI opens the camera and will return one of these three options.
 
 
 \begin{enumerate}
@@ -390,12 +391,12 @@ So when a user selects to take a real time photo that request is then sent to th
   \item The frame has been read correctly\\
 \end{enumerate}  
 
-Only if the frame is successful will a proper web page load. If the camera doesn't open or the frame is empty is will display the error to the user.\\
+Only if the frame is successful will a proper web page load. If the camera doesn't open or the frame is empty it will display the error to the user.\\
 
 \begin{figure}[H]
 	\centering	
 	\includegraphics [scale=0.7]{../../Pictures/TakeLivePhoto.jpg} 
-	\caption{After taking a live frame\\}	
+	\caption{After a live frame has been taken\\}	
 \end{figure}
 
 
@@ -406,9 +407,9 @@ Only if the frame is successful will a proper web page load. If the camera doesn
 \subsection{How Motion Detection Works}
 \label{subsec:motionworks}
 
-Motion detection is done by using the OpenCV library. The method chosen for motion detection is Absolute Difference. This method will detect changes happening after new frames are read in. This method was chosen because it is effective at detecting motion while not killing the pi.\\
+Motion detection is done by using the OpenCV library. The method chosen for motion detection is Absolute Difference. This method will detect changes happening after frames are read in. This method was chosen because it is effective at detecting motion while not overpowering the Pi.\\
 
-OpenCV has an inbuilt function called {\it absdiff()}. This method takes in two RGB frames. The two frames are then subtracted from one another producing a new RGB image that contains the differences if any. RGB images are not useful when looking for changes so the difference image is converted to grayscale. This means that the image will only contain black and white pixels making it easier to see if there are any changes from one frame to the next. If there are no changes the image will only contain black pixels. When there are changes white pixels will appear. The white pixels are counted and if there are more pixels then a certain count then motion has been detected.\\
+OpenCV has an inbuilt function called {\it absdiff()}. This method takes in two coloured (RGB) frames. The two frames are then subtracted from one another producing a new RGB image that contains the differences if any. RGB images are not useful when looking for changes so the difference image is converted to grayscale. This means that the image will only contain black and white pixels making it easier to see if there are any changes from one frame to the next. If there are no changes the image will only contain black pixels. When there are changes white pixels will appear. The white pixels are counted and if there are more pixels then a set threshold then motion has been detected.\\
 
 
 	{\it absdif(prevFrame - nextFrame = difference)\\}
@@ -420,7 +421,7 @@ OpenCV has an inbuilt function called {\it absdiff()}. This method takes in two 
 	{\it  if WhiteCount is above threshold save images	\\}
 
 
-If motion does get detected the RGB frames that were originally read in are saved. Since the difference image will not mean anything it does not get saved. If motion gets detected then the images are not saved and new images are read in.\\ 
+If motion is detected the RGB frames that were originally read in are saved. Since the difference image will not mean anything it will not be saved. If motion is detected then the images are not saved and new images are read in and the process repeats.\\ 
 
 
 The following is an example of the motion detection working using Absolute Difference.\\
@@ -444,7 +445,7 @@ Here are the two frames that have been read in. The first frame read in will rep
   \end{minipage}
 \end{figure}
 
-This image is the difference image after it has been converted to grayscale. The white pixels represent the differences that absolute difference has found.
+This image is the difference image after it has been converted to grayscale. The white pixels represent the differences that Absolute Difference has found.
 
 \begin{figure}[H]
 \centering
@@ -458,13 +459,13 @@ This image is the difference image after it has been converted to grayscale. The
 
 On the motion detection web page there are two options. Start motion detection and stop motion detection. If motion detection is currently running it will be displayed to the user. There will be text displaying if the motion detection is on or off as well as a small icon which will appear. Depending on which option was selected a different icon will appear. These icons will notify a user if starting or stopping motion detection was successful.\\
 
-If a user does press start even though motion detection is running it does not affect the process in any way. Motion detection will continue to run as normal. This is also the same for pressing stop motion detection. If no motion detection is running pressing start will not cause any changes.\\
+If a user does press start even though motion detection is running it does not affect the process in any way. Motion detection will continue to run as normal. This is also the same for pressing stop motion detection. If no motion detection is running pressing stop will not cause any changes.\\
 
 
 
 
 
-{\bf Screen shots from the motion detection section on the web application\\}
+Screen shots from the motion detection section on the web application:
 
 \begin{figure}[H]
 	\centering	
@@ -475,18 +476,18 @@ If a user does press start even though motion detection is running it does not a
 \begin{figure}[H]
 	\centering	
 	\includegraphics [scale=0.7]{../../Pictures/MotionStarted.jpg} 
-	\caption{Motion Detection after being started\\}	
+	\caption{Motion Detection after it is started\\}	
 \end{figure}
 
 \begin{figure}[H]
 	\centering	
 \includegraphics [scale=0.7]{../../Pictures/MotionStopped.jpg}
-	\caption{Motion Detection after being stopped\\}	
+	\caption{Motion Detection after it is stopped\\}	
 \end {figure}
 
 
 
-{\bf Below are the icons in a larger form which are used to tell a user if motion detection is running or not.\\}
+Below are the icons in a larger form which are used to tell a user if motion detection is running or not.
 
 \begin{figure}[H]
   \begin{minipage}[b]{0.62\linewidth}
@@ -507,8 +508,9 @@ If a user does press start even though motion detection is running it does not a
 
 \subsection{Back End of the Motion Detection Web Page}
 \label{subsec:motionwebpageB}
-The back end of the motion detection web page is taken care of by a JavaScript function. This function will send an AJAX request to a PHP program when a button is pressed. PHP is a server side language so a request needs to be sent so that it will run. The PHP program will call the correct bash script which depending on the option selected will either start or stop motion detection.\\
+The back end of the motion detection web page is taken care of by a JavaScript function. This function will send an AJAX request to a PHP program when a button is pressed. PHP is a server side language so a request needs to be sent to make it run. The PHP program will call the correct bash script which depending on the option selected will either start or stop motion detection.\\
 
+%Comments on start and stop  and motion need to be fixed
 When a button is pressed the value of either 'start' or 'stop' will be passed into a JavaScript function. This function will determine whether start or stop has been called. It will then use an AJAX request to send the value 'motion' to the correct PHP program. When the PHP program receives the request it will check that it receives the word 'motion'. If it does then it will call a bash script that will either start or stop the motion detection.\\
 
 This motion detection JavaScript function is the reason why a JavaScript enabled browser is necessary.\\
@@ -520,11 +522,11 @@ This motion detection JavaScript function is the reason why a JavaScript enabled
 
 Motion is a program that is available to download and will be used to handle video live streaming. It sets up a video stream and will display the images that it receives from the camera attached to the Pi to a given web page on a particular port. It can also offer to do motion detection but since this has been implemented using OpenCV this aspect of Motion is not in use for this project.\\
 
-Before Motion is used it needs to be set up by making changes to the configuration file. There are many changes that can be configured from how many frames it will display per second to the port the video is displayed on. Motion will take frames from the camera and display them onto the web page. This project is set up so that no live streaming is saved. This is done to avoid saving lengthy videos which would take up a lot of space to store which may not contain any useful information.\\
+Before Motion is used it needs to be set up by making changes to the configuration file. There are many changes that can be configured from how many frames it will display per second to the port the video is displayed on. Motion will take frames from the camera and display them onto the web page. This project is set up so that no live streaming is saved. This is to avoid saving lengthy videos which would take up a lot of space to store and may not contain any useful information.\\
 
 This feature currently does not work properly or efficiently. For future work this area could be greatly improved.\\
 
-The video live streaming option on the home page of the web application does not start or stop streaming. The current problem with the live streaming is that when it is started it affects the website and sometimes the Pi itself connecting to the internet. It either causes the website to be entirely unavailable or disconnects the Pi from the internet. This could be due to Motion taking up a lot of memory on the Pi and the Pi simply can't handle it so it makes it unavailable. \\
+The video live streaming option on the home page of the web application does not start or stop streaming. The current problem with the live streaming is that when it is started it affects the website and sometimes the Pi itself from connecting to the internet. It either causes the website to be entirely unavailable or disconnects the Pi from the internet. This could be due to Motion taking up a lot of memory on the Pi or the Pi simply can't handle it so it makes it unavailable. \\
 
 
 \chapter{Testing}
