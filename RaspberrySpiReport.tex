@@ -35,12 +35,12 @@ I hereby declare that this project is entirely my own work and that it has not b
 
 \begin{abstract}
 	\textsc{\huge Acknowledgements} \\[2.0cm]
-  Thank you to everyone who helped me throughout this project 
+  Thank you to everyone who has helped me throughout this project. 
 \end{abstract}
 
 \begin{abstract}
 	\textsc{\huge Abstract}  \\[1.0cm]
-	Security systems set up in homes can be expensive and complex to set up. The cameras used can be bulky in size and therefore difficult to successfully hide. This project is to create a home security system using a Raspberry Pi and the Raspberry Pi camera module.   
+	Security systems set up in homes can be expensive and complex to set up. The cameras used can be bulky in size and therefore difficult to successfully hide. This project is to create a home security system using a Raspberry Pi and the Raspberry Pi camera module. (More needs to be added)   
 \end{abstract}
 
 
@@ -48,7 +48,7 @@ I hereby declare that this project is entirely my own work and that it has not b
 \chapter{Introduction}
 \label{ch:intro} 
 
-Home security systems have been available for a few years now. Most are quite expensive and are very obvious to spot. The camera used in them may not be able to supply 1080p video.
+Home security systems have been available for a few years now. Most are quite expensive and are very obvious to spot. The camera used in them may not be able to supply 1080p video. (Add more)
 
 \section{Motivation/Problem}
 \label{sec:motprob}
@@ -75,17 +75,17 @@ The objective of background research was to see what features current surveillan
 Most security systems have the ability to live stream a video. Some systems this is the their only feature and it would have the ability to record the entire footage. This can sometimes be a waste because no useful information can be gotten from the footage or simply nothing happens that would need to be recorded. For this project live streaming is a feature but the live stream footage by default is not saved. This can be changed however if the user wishes.\\
 Another popular feature is motion detection. Instead of live streaming motion detection would be constantly running and only when a change occurs will the images get saved. \\
 
-Before this project Security systems could be bought either pre made or built by a person using a web camera. For a pre built home security system it just need to be set up and users could watch a feed that was provided. But it gave no control to the user. No changes could be made or features added to it. The downside to a prebuilt system would be that they can become quite expensive acquire, maintain and repair if needed. The camera used would not be able to he hidden due to it’s size and the system being prebuilt will not allow any customization made to it or even have features added.\\
+Before this project Security systems could be bought either pre made or built by a person using a web camera. For a pre built home security system it just need to be set up and users could watch a feed that was provided. But it gave no control to the user. No changes could be made or features added to it. The downside to a pre built system would be that they can become quite expensive acquire, maintain and repair if needed. The camera used would not be able to he hidden due to it’s size and the system being pre built will not allow any customization made to it or even have features added.\\
 
-Systems made at home that a user could create and set up themselves usually consist of a desktop or laptop with a USB connected webcam or simply just a IP camera which can be remotely accessed. Web cameras and IP cameras can be expensive and the higher the quality desired the higher the cost of them will be.  But like pre built systems the user may not have control over them depending on the software used. \\ 
+Systems made at home that a user could create and set up themselves usually consist of a desktop or laptop with a USB connected web camera or simply just a IP camera which can be remotely accessed. Web cameras and IP cameras can be expensive and the higher the quality desired the higher the cost of them will be.  But like pre built systems the user may not have control over them depending on the software used. \\ 
 
 \subsection{Mobile App or Web Application}
 \label{subsec:Android}
 The original concept was to create an Android app for the Raspberry Spi simply because apps are very popular these days. From this app the end user would control the Raspberry Spi. On the app the images would be viewed, motion would be started \& stopped and the video footage of the live stream could be viewed. \\
 
-If an Android app had of been used this would mean that this project would only be useful to users who had access to an Android phone. This project would be unavailable to iPhone users, Windows users and users who would prefer to access it through a computer's web browser.\\
+If the Android app was the method used to control the project this would mean that this project would only be useful to users who had access to an Android phone. This project would be unavailable to iPhone users, Windows users and users who would prefer to access it through a computer's web browser.\\
 
-Therefore the decision to make this project accessible on a web application would mean that no user would be unable to use this project and it would be available to all. It also reduces one element of setting up the Raspberry Spi. No app needs to be downloaded and configured.\\
+Therefore the decision to make this project accessible on a web application would mean that no user would be unable to use this project and it would be accessible and available to all who wished to use it. It also reduces one element of setting up the Raspberry Spi. No app will need to be downloaded or configured.\\
 
 %\section{Technical Approach/Methodology}
 %\label{sec:tech}
@@ -94,7 +94,7 @@ Therefore the decision to make this project accessible on a web application woul
 \chapter{Design}
 \label{ch:design}
 % Hardware required
-	One of the main aims of this project is to make it easy for others to set up regardless of their background. With this in mind there are not a lot of hardware components required for the Raspberry Spi. Additional hardware items such as a keyboard and mouse would only be needed for initial set up. But can be used if needed. Some hardware components are also just a suggestion. \\
+	One of the main aims of this project is to make it easy for others to set up regardless of their background. With this in mind there are not a lot of hardware components required for the Raspberry Spi. Additional hardware items such as a keyboard and mouse would only be needed for initial set up. But depending on how a user decides to make changes on the Pi they can be used if needed. Some hardware components are also just a suggestion to make it easier to control the Raspberry Spi. \\
 	
 \section{Hardware}	
 \label{sec:hardware}
@@ -438,29 +438,15 @@ This image is the difference image after it has been converted to grayscale. The
 \subsection{Front End Motion Detection Web Page}
 \label{subsec:motionwebpageF}
 
-On the motion detection web page there are two options. Start motion and stop motion. If motion is currently running it will be displayed to the user. There will be text displaying if the motion is on or off and a small icon will appear as well.\\
+On the motion detection web page there are two options. Start motion detection and stop motion detection. If motion detection is currently running it will be displayed to the user. There will be text displaying if the motion detection is on or off as well as a small icon which will appear. Depending on which option was selected a different icon will appear. These icons will notify a user if starting or stopping motion detection was successful.\\
+
+If a user does press start even though motion detection is running it does not affect the process in any way. Motion detection will continue to run as normal. This is also the same for pressing stop motion detection. If no motion detection is running pressing start will not cause any changes.\\
 
 
 
-\begin{figure}[htbp]
-  \begin{minipage}[b]{0.62\linewidth}
-    \centering
-    \includegraphics [width=\linewidth]{../../Pictures/raspberrySPYstart.png} 
-    \caption{Motion Detection Start icon}
-    \label {fig:start}
-  \end {minipage}
-  \hspace{0.5cm}
-  \begin{minipage}[b]{0.62\linewidth}
-    \centering
-    \includegraphics [width=\linewidth]{../../Pictures/raspberrySPYstop.png} 
-    \caption{Motion Detection Stop icon}
-    \label{fig:stop}
-  \end{minipage}
-\end{figure}
 
 
-
-{\bf Screenshots from the motion detection area on the web application\\}
+{\bf Screen shots from the motion detection section on the web application\\}
 
 \begin{figure}[H]
 	\centering	
@@ -481,24 +467,46 @@ On the motion detection web page there are two options. Start motion and stop mo
 \end {figure}
 
 
-\subsection{Back End Motion Detection Web Page}
-\label{subsec:motionwebpageB}
-The back end of the motion detection web page is taken care of by a JavaScript function which sends an AJAX request to a PHP program which will call the correct bash script depending on which motion detection option is used.\\
 
-When a button is pressed the value of either 'start' or 'stop' will be passed into a JavaScript function. This function will determine whether start or stop has been called. It will then use an AJAX request to send the value 'motion' to the correct PHP program. When the PHP program receives the request it will check that it receives the word 'motion'. If it does then it will call a bash script that will either start or stop the motion detection. \\
+{\bf Below are the icons in a larger form which are used to tell a user if motion detection is running or not.\\}
+
+\begin{figure}[H]
+  \begin{minipage}[b]{0.62\linewidth}
+    \centering
+    \includegraphics [width=\linewidth]{../../Pictures/raspberrySPYstart.png} 
+    \caption{Motion Detection Start icon}
+    \label {fig:start}
+  \end {minipage}
+  \hspace{0.5cm}
+  \begin{minipage}[b]{0.62\linewidth}
+    \centering
+    \includegraphics [width=\linewidth]{../../Pictures/raspberrySPYstop.png} 
+    \caption{Motion Detection Stop icon}
+    \label{fig:stop}
+  \end{minipage}
+\end{figure}
+
+
+\subsection{Back End of the Motion Detection Web Page}
+\label{subsec:motionwebpageB}
+The back end of the motion detection web page is taken care of by a JavaScript function. This function will send an AJAX request to a PHP program when a button is pressed. PHP is a server side language so a request needs to be sent so that it will run. The PHP program will call the correct bash script which depending on the option selected will either start or stop motion detection.\\
+
+When a button is pressed the value of either 'start' or 'stop' will be passed into a JavaScript function. This function will determine whether start or stop has been called. It will then use an AJAX request to send the value 'motion' to the correct PHP program. When the PHP program receives the request it will check that it receives the word 'motion'. If it does then it will call a bash script that will either start or stop the motion detection.\\
+
+This motion detection JavaScript function is the reason why a JavaScript enabled browser is necessary.\\
 
 
 \section{Video Live Streaming}
 \label{sec:video}
 % Future Possibilites
-Motion. How motion(live streaming) works.
-Motion is a program that is available to download. It sets up a video stream and will display images from the camera attached to the Pi to a given web page. It can also offer to do motion detection but since is been implemented using OpenCV this aspect of Motion is not in use.\\
 
-Before Motion is used it is configured from how many frames it will display per second to the port the video is displayed on. Motion will take frames that are
+Motion is a program that is available to download and will be used to handle video live streaming. It sets up a video stream and will display the images that it receives from the camera attached to the Pi to a given web page on a particular port. It can also offer to do motion detection but since this has been implemented using OpenCV this aspect of Motion is not in use for this project.\\
 
-This feature currently does not work properly or efficiently.\\
+Before Motion is used it needs to be set up by making changes to the configuration file. There are many changes that can be configured from how many frames it will display per second to the port the video is displayed on. Motion will take frames from the camera and display them onto the web page. This project is set up so that no live streaming is saved. This is done to avoid saving lengthy videos which would take up a lot of space to store which may not contain any useful information.\\
 
-The video live streaming option on the home page of the web application does not start or stop streaming. It will display a blank page as to avoid effecting other features from working and effecting the pi connecting to the internet. Having this feature working properly would be an area of this project that could be expanded upon or changed in the future\\
+This feature currently does not work properly or efficiently. For future work this area could be greatly improved.\\
+
+The video live streaming option on the home page of the web application does not start or stop streaming. The current problem with the live streaming is that when it is started it affects the website and sometimes the Pi itself connecting to the internet. It either causes the website to be entirely unavailable or disconnects the Pi from the internet. This could be due to Motion taking up a lot of memory on the Pi and the Pi simply can't handle it so it makes it unavailable. \\
 
 
 \chapter{Testing}

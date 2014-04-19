@@ -14,7 +14,7 @@
 \contentsline {section}{\numberline {3.4}Motion Detection}{21}
 \contentsline {subsection}{\numberline {3.4.1}How Motion Detection Works}{21}
 \contentsline {subsection}{\numberline {3.4.2}Front End Motion Detection Web Page}{23}
-\contentsline {subsection}{\numberline {3.4.3}Back End Motion Detection Web Page}{26}
+\contentsline {subsection}{\numberline {3.4.3}Back End of the Motion Detection Web Page}{27}
 \contentsline {section}{\numberline {3.5}Video Live Streaming}{27}
 \contentsline {chapter}{\numberline {4}Testing}{28}
 \contentsline {section}{\numberline {4.1}Testing Motion Detection}{28}
