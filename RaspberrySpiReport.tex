@@ -357,9 +357,9 @@ Taking a real time photo is an option that allows the user to take a photo with 
 
 Common Gateway Interface scripting is a way for a web user to click an option on a web page, the web server will then send the request server side where the application is then carried out. CGI scripts are stored in a .cgi file. For this project the CGI application is done using the language C++. When the C++ program is compiled the output of the program is set to a .cgi file\\
 
-An example of this would be:
-\centering
-{\it g++ realTimePhoto.cpp -o realTimePhoto.cgi}
+An example of this would be:\\
+
+\textbf{\textit{g++ realTimePhoto.cpp -o realTimePhoto.cgi\\ }}
 
 So when a user selects to take a real time photo that request is then sent to the Pi and it is asking to run the real time photo CGI script. The C++ program is then run and the results are returned and displayed on the web page. The layout and results shown to the user are taken from the C++ program.\\
 
@@ -387,6 +387,7 @@ Only if the frame is successful will a proper web page load. If the camera doesn
 % LiveStreaming
 \subsection{How Motion Detection Works}
 \label{subsec:motionworks}
+
 Motion detection is done by using the OpenCV library. The method chosen for motion detection is Absolute Difference. This method will detect changes happening after new frames are read in. This method was chosen because it is effective at detecting motion while not killing the pi.\\
 
 OpenCV has an inbuilt function called {\it absdiff()}. This method takes in two RGB frames. The two frames are then subtracted from one another producing a new RGB image that contains the differences if any. RGB images are not useful when looking for changes so the difference image is converted to grayscale. This means that the image will only contain black and white pixels making it easier to see if there are any changes from one frame to the next. If there are no changes the image will only contain black pixels. When there are changes white pixels will appear. The white pixels are counted and if there are more pixels then a certain count then motion has been detected.\\
@@ -560,8 +561,8 @@ Various changes can be made to match each user depending on their preference. It
 All of the Raspberry Spi code is completely open source and is available to download from github. This project has been made open source because it will allow for endless possibilities of additional extras to be added to it by other people. Many different people might see this project in a different way and could add to it their own completely unique and different ideas.\\
 % \cite{notes}
 \noindent
-{\bf Raspberry Spi Code is available here:}\\
-{\\http://www.github.com/Smellen/RaspberrySpi}
+{\bf Raspberry Spi Code is available here:\\}
+{http://www.github.com/Smellen/RaspberrySpi}
 
 
 

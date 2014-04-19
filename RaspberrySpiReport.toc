@@ -11,17 +11,17 @@
 \contentsline {subsection}{\numberline {3.1.1}Accessing the Web Application}{17}
 \contentsline {section}{\numberline {3.2}Help Page}{18}
 \contentsline {section}{\numberline {3.3}Real Time Photo}{19}
-\contentsline {section}{\numberline {3.4}Motion Detection}{20}
-\contentsline {subsection}{\numberline {3.4.1}How Motion Detection Works}{20}
-\contentsline {subsection}{\numberline {3.4.2}Front End Motion Detection Web Page}{22}
-\contentsline {subsection}{\numberline {3.4.3}Back End Motion Detection Web Page}{25}
-\contentsline {section}{\numberline {3.5}Video Live Streaming}{26}
-\contentsline {chapter}{\numberline {4}Testing}{27}
-\contentsline {section}{\numberline {4.1}Testing Motion Detection}{27}
-\contentsline {section}{\numberline {4.2}Testing Raspberry Spi Web Application}{28}
-\contentsline {section}{\numberline {4.3}Testing Real Time Photo}{28}
-\contentsline {section}{\numberline {4.4}Testing Live Streaming}{28}
-\contentsline {section}{\numberline {4.5}Testing Photo Storage}{28}
-\contentsline {chapter}{\numberline {5}Conclusion}{29}
-\contentsline {section}{\numberline {5.1}Future Work}{29}
-\contentsline {section}{\numberline {5.2}Expansion Work}{30}
+\contentsline {section}{\numberline {3.4}Motion Detection}{21}
+\contentsline {subsection}{\numberline {3.4.1}How Motion Detection Works}{21}
+\contentsline {subsection}{\numberline {3.4.2}Front End Motion Detection Web Page}{23}
+\contentsline {subsection}{\numberline {3.4.3}Back End Motion Detection Web Page}{26}
+\contentsline {section}{\numberline {3.5}Video Live Streaming}{27}
+\contentsline {chapter}{\numberline {4}Testing}{28}
+\contentsline {section}{\numberline {4.1}Testing Motion Detection}{28}
+\contentsline {section}{\numberline {4.2}Testing Raspberry Spi Web Application}{29}
+\contentsline {section}{\numberline {4.3}Testing Real Time Photo}{29}
+\contentsline {section}{\numberline {4.4}Testing Live Streaming}{29}
+\contentsline {section}{\numberline {4.5}Testing Photo Storage}{29}
+\contentsline {chapter}{\numberline {5}Conclusion}{30}
+\contentsline {section}{\numberline {5.1}Future Work}{30}
+\contentsline {section}{\numberline {5.2}Expansion Work}{31}
