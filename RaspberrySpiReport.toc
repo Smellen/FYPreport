@@ -1,27 +1,27 @@
-\contentsline {chapter}{\numberline {1}Introduction}{2}
-\contentsline {section}{\numberline {1.1}Motivation/Problem}{2}
-\contentsline {section}{\numberline {1.2}Background Research}{3}
-\contentsline {subsection}{\numberline {1.2.1}Mobile App or Web Application}{3}
-\contentsline {chapter}{\numberline {2}Design}{5}
-\contentsline {section}{\numberline {2.1}Hardware}{5}
-\contentsline {section}{\numberline {2.2}Software}{12}
-\contentsline {section}{\numberline {2.3}Additional Requirements}{14}
-\contentsline {chapter}{\numberline {3}Implementation}{16}
-\contentsline {section}{\numberline {3.1}Web Application}{16}
-\contentsline {subsection}{\numberline {3.1.1}Accessing the Web Application}{17}
-\contentsline {section}{\numberline {3.2}Help Page}{18}
-\contentsline {section}{\numberline {3.3}Real Time Photo}{19}
-\contentsline {section}{\numberline {3.4}Motion Detection}{21}
-\contentsline {subsection}{\numberline {3.4.1}How Motion Detection Works}{21}
-\contentsline {subsection}{\numberline {3.4.2}Front End Motion Detection Web Page}{23}
-\contentsline {subsection}{\numberline {3.4.3}Back End of the Motion Detection Web Page}{27}
-\contentsline {section}{\numberline {3.5}Video Live Streaming}{27}
-\contentsline {chapter}{\numberline {4}Testing}{28}
-\contentsline {section}{\numberline {4.1}Testing Motion Detection}{28}
-\contentsline {section}{\numberline {4.2}Testing Raspberry Spi Web Application}{29}
-\contentsline {section}{\numberline {4.3}Testing Real Time Photo}{29}
-\contentsline {section}{\numberline {4.4}Testing Live Streaming}{29}
-\contentsline {section}{\numberline {4.5}Testing Photo Storage}{29}
-\contentsline {chapter}{\numberline {5}Conclusion}{30}
-\contentsline {section}{\numberline {5.1}Future Work}{30}
-\contentsline {section}{\numberline {5.2}Expansion Work}{31}
+\contentsline {chapter}{\numberline {1}Introduction}{3}
+\contentsline {section}{\numberline {1.1}Motivation/Problem}{3}
+\contentsline {section}{\numberline {1.2}Background Research}{4}
+\contentsline {subsection}{\numberline {1.2.1}Mobile App or Web Application}{5}
+\contentsline {chapter}{\numberline {2}Design}{6}
+\contentsline {section}{\numberline {2.1}Hardware}{6}
+\contentsline {section}{\numberline {2.2}Software}{13}
+\contentsline {section}{\numberline {2.3}Additional Requirements}{16}
+\contentsline {chapter}{\numberline {3}Implementation}{18}
+\contentsline {section}{\numberline {3.1}Web Application}{18}
+\contentsline {subsection}{\numberline {3.1.1}Accessing the Web Application}{19}
+\contentsline {section}{\numberline {3.2}Help Page}{20}
+\contentsline {section}{\numberline {3.3}Real Time Photo}{22}
+\contentsline {section}{\numberline {3.4}Motion Detection}{23}
+\contentsline {subsection}{\numberline {3.4.1}How Motion Detection Works}{23}
+\contentsline {subsection}{\numberline {3.4.2}Front End Motion Detection Web Page}{25}
+\contentsline {subsection}{\numberline {3.4.3}Back End of the Motion Detection Web Page}{29}
+\contentsline {section}{\numberline {3.5}Video Live Streaming}{30}
+\contentsline {chapter}{\numberline {4}Testing}{31}
+\contentsline {section}{\numberline {4.1}Testing Motion Detection}{31}
+\contentsline {section}{\numberline {4.2}Testing Raspberry Spi Web Application}{32}
+\contentsline {section}{\numberline {4.3}Testing Real Time Photo}{32}
+\contentsline {section}{\numberline {4.4}Testing Live Streaming}{32}
+\contentsline {section}{\numberline {4.5}Testing Photo Storage}{33}
+\contentsline {chapter}{\numberline {5}Conclusion}{34}
+\contentsline {section}{\numberline {5.1}Future Work}{35}
+\contentsline {section}{\numberline {5.2}Expansion Work}{35}
