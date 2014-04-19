@@ -100,7 +100,10 @@ The other factor in this decision was it reduced one element of setting up the R
 \chapter{Design}
 \label{ch:design}
 % Hardware required
-	One of the main aims of this project is to make it easy for others to set up regardless of their background. With this in mind there are not a lot of hardware components required for the Raspberry Spi. Additional hardware items such as a keyboard and mouse would only be needed for initial set up. But depending on how a user decides to make changes on the Pi they can be used if needed. Some hardware components are also just a suggestion to make it easier to control the Raspberry Spi. \\
+	One of the main aims of this project is to make it easy for users to set up regardless of their background. With this in mind there are relatively few hardware components required for the Raspberry Spi such as the Raspberry Pi Model B itself, Raspberry Pi Model B case, Raspberry Pi Camera Module and the SD card.\\
+	 
+Additional items such as a keyboard and mouse are only needed for initial set up and depending on the users preference of how they will access the Pi to make changes. Some hardware components are also just a suggestion to make it easier to control the Raspberry Spi. 
+There are also suggested hardware items such as a USB hub powered externally and a Wifi adapter should the user feel they are required.\\
 	
 \section{Hardware}	
 \label{sec:hardware}
@@ -129,30 +132,32 @@ The Raspberry Pi is described as a credit card sized computer. There are two ava
   \item 3.5mm Audio Jack\\
 \end{itemize}
   
-A Raspberry Pi Model A is still the same size as the Model B except it's slightly cheaper and it has different components. The Model A differs because it only has 256MB of RAM available, no Ethernet port and one USB slot. This project has also not been tested on a Model A version\\
+Raspberry Pi Model A is still the same size as the Model B except it's slightly cheaper in price and has some different components. The Model A differs because it has 256MB of RAM available, no Ethernet port and one USB slot. This project has not been tested on a Model A version.\\
 % Reference Image: http://readwrite.com/2014/01/20/raspberry-pi-everything-you-need-to-know#awesm=~oBwfeWDLWC0rMX
 
-\begin{figure}[ht!]
+\begin{figure}[H]
 	\centering	
 	\includegraphics [scale=0.23]{../../Pictures/modelb.jpg}\\
 	\caption{Raspberry Pi Model B board layout without a protective case}
 \end{figure}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \noindent
 {\bf Raspberry Pi Model B Case:} \\ 
 \break
 Most Raspberry Pi's are not sold with a a protective case. The case is essential because otherwise the Pi will have no protection and can get damaged very easily. \\ 
 
-A Model B case is also essential so there is space for the camera module to connect to the CSI connector on the Pi board. Model A cases do not have a space for the camera to connect. This will make connecting the camera very difficult.\\
+The other advantage to the Model B case is that there is space for the camera module to attach to the CSI connector on the Pi board. Model A cases do not have a space for the camera to attach to the CSI connector and this makes attaching the camera very difficult.\\
 
 
 \clearpage %newpage
 \noindent
 {\bf Raspberry Pi Camera Module:} \\
 \break
-The camera module is a camera that has been designed specifically for the Raspberry Pi in mind. It connects directly into the Pi to the CSI connector rather than USB by a ribbon cable. The CSI connector exclusively carries pixel data. This means that the camera module is capable of extremely high data rates and images would be sent to the Pi quicker then if a camera attached by USB would.\\
+The camera module is a camera that has been designed specifically with the Raspberry Pi in mind. It attaches directly into the Pi to the CSI connector by a ribbon cable rather than USB. The CSI (camera serial interface) connector exclusively carries pixel data. This means that the camera module is capable of extremely high data rates and images would be sent to the Pi quicker then if a camera attached by USB would.\\
 
-The camera itself is not expensive. It costs roughly 20 Euro and will work instantly once it is properly attached to the Pi board. To connect the camera the ribbon cable is simply inserted into the connector on the board. The camera is capable of outputting images and video of very high quality. For images the max resolution the camera is capable of is 2592 x 1944. For Video the camera is capable of capturing video in 1080p quality. If a web camera of this quality was to be used instead of this camera module for this this project it would be difficult to find one that would produce such high quality for such an affordable price and that can be hidden easily.\\
+The camera itself is not expensive and costs roughly 20 Euro. It will work instantly once it is properly attached to the Pi board. To connect the camera, the ribbon cable is simply inserted into the CSI connector on the Pi board. The camera is capable of outputting images and video of very high quality, the max resolution the camera is capable of is 2592 x 1944. For video the camera is capable of capturing footage in 1080p quality. 
+
+For this project if a web camera of this quality was to be used instead of this camera module it would be difficult to find one to produce the same high quality at an affordable price that can be hidden easily.\\
 
 There is an infared filter on the camera and therefore it cannot detect IR. There is another camera module called the Pi Noir which is available.\\ 
 
@@ -177,23 +182,29 @@ There is an infared filter on the camera and therefore it cannot detect IR. Ther
 \noindent
 {\bf USB Hub powered externally:}\\
 \break
-A USB Hub is recommended when attaching any components to the Pi by USB. If any component is connected by USB in either of the two USB slots available on the Pi, they will draw power from the Pi itself. This will cause the Pi to heat up. If the Raspberry is left on for several hours, as this project aims to be, it could cause damage to the Pi or cause some features not to work properly. An externally powered USB hub will allow for the Pi to avoid heating up and create more USB slots available without affecting the Pi.\\ 
+
+A USB Hub is recommended when attaching any components to the Pi by USB. If any component is connected to the two USB slots on the Pi, it will draw power from the Pi itself and could cause the Pi to heat up and some features not to work properly. \\
+
+If the Raspberry is left on for several hours, as is the aim of this project, it would also cause overheating may results in some features not to working properly.\\ 
+
+
+An externally powered USB hub will allow for the Pi to avoid overheating and create extra USB slots without affecting the Pi operating.\\ 
 
 No particular external USB hub is recommended as any USB hub could be used.\\
 
 \noindent
 {\bf Wifi Adapter:}\\
 \break
-When connecting to the internet it is recommended to use a Wifi Adapter as it will be more useful then connecting to the internet by an Ethernet cable. By using an adapter it will avoid having to hide another cable and overall make this project neater to set up.\\
+When connecting to the internet a Wifi Adapter is recommended as it will be more useful then connecting to the internet by an Ethernet cable. By using an adapter it would avoid having to hide another cable and overall make this project neater to set up.\\
 
-Using a Wifi Adapter is not a requirement of this project but is more of a recommendation. This is a decision the end user will make.\\
+Using a Wifi Adapter is not a requirement for this project but  more a recommendation. This is a decision for the end user to make.\\
 
 \noindent
 {\bf SD card:}\\
 \break
-An SD card will act as storage for the Pi. Most Raspberry Pi's do not come with an SD card and they must be bought separately. The Raspberry Pi has no on board memory so a form of storage is needed. An operating system will be loaded onto it and it will also store all images taken.\\
+An SD card will act as storage for the Pi. Most Raspberry Pi's do not come with an SD card and must be bought separately. The Raspberry Pi has no on board memory so a form of storage is required. An operating system will be loaded onto it and will also store all images taken.\\
 
-External hard drives can also be used to store the images but again that will be another decision left to the end user. The storage device chosen depends on how frequent the Raspberry Spi will be used and then amount of images a user wishes to keep stored.\\
+External hard drives can also be used to store the images but again that will be another decision left to the end user. The storage device chosen depends on how frequent the Raspberry Spi will be used and the amount of images a user wishes to keep stored.\\
 
 
 
@@ -203,30 +214,21 @@ External hard drives can also be used to store the images but again that will be
 % Software required
 This chapter is about the software that will be needed throughout this project and why it is needed.\\
 
-{\bf The following is a list of all the software that will need to be installed:}
+The following is a list of all the software that will need to be installed:\\
 \begin{itemize}
-  \item Operating System - Raspian \\
-  \item UV4L (Universal Video 4 Linux)\\  
+  \item Operating System - Raspbian \\
   \item OpenCV\\
+  \item UV4L (Universal Video 4 Linux)\\  
   \item Apache\\
   \item Motion\\
 \end{itemize}
 
 \noindent
-{\bf Operating System - Raspian:}\\
+{\bf Operating System - Raspbian:}\\
 \break
-With the Raspberry Pi there are several operating systems that can be chosen. This project uses operating system Raspian because it is the most popular OS for the Pi. Being the most popular it is easy to debug problems and solve issues that arise when searching online.\\
+With the Raspberry Pi there are several operating systems that can be chosen. This project uses the operating system (OS) Raspbian because it is the most popular OS for the Pi. Being the most popular it is easy to debug problems and solve issues that arise when searching online.\\
 
-Raspian is free to download and it is based off of the operating system Debian but it has been optimized to work on a Raspberry Pi. \\ 
-
-\noindent
-{\bf UV4L (Universal Video 4 Linux):}\\
-\break
-The camera module has it's own default driver and it is called RaspiCam. RaspiCam does not work properly with OpenCV. Since OpenCV is used frequently throughout this project UV4L is needed.\\
-
-When OpenCV tries to locate a camera it looks for a device ID. The camera module does have a device ID but it's not an integer value. It is the value 'pi' because of this OpenCV cannot use the camera module with it's default drivers. To get around this driver problem UV4L (Universal Video 4 Linux) is used instead. UV4L will create a device node from the given driver Raspicam. OpenCV will not be able to tell the difference but it will be able to be found.\\
-
-When using this driver the UV4L initializing script must be run. It can be added to the Raspberry's start up script or can be called after each boot. The parameters passed in can be interchangeable. \\
+Raspbian is free to download and it is based off of the operating system Debian but it has been optimized to work on a Raspberry Pi. \\ 
 
 \noindent
 {\bf OpenCV:}\\
@@ -237,34 +239,44 @@ OpenCV is a free to use cross platform computer vision library that was created 
 For this project OpenCV will be used when taking a real time photo and during motion detection to determine if motion has actually occurred.\\
 
 \noindent
+{\bf UV4L (Universal Video 4 Linux):}\\
+\break
+The camera module has it's own default driver and it is called RaspiCam. RaspiCam does not work properly with OpenCV. Since OpenCV is used frequently throughout this project UV4L is needed.\\
+
+When OpenCV tries to locate a camera it looks for a device ID. The camera module does have a device ID but it's not an integer value. It is the value 'pi' and because of this OpenCV cannot use the camera module with it's default drivers. To get around this driver problem UV4L (Universal Video 4 Linux) is used instead. UV4L will create a device node from the given driver Raspicam. OpenCV will not be able to tell the difference but it will be able find and access the camera module.\\
+
+When using this driver the UV4L initializing script must be run. It can be added to the Raspberry's start up script or can be called after each boot. The parameters passed in can be interchangeable. \\
+
+
+\noindent
 {\bf Apache:}\\
 \break
-Apache web hosting will be used to host the Raspberry Spi website. Apache will continue running as a background process. While the Pi is handling motion detection, taking photos the website will be able to be accessed and process requests received. Apache will run as soon as the Pi boots. This means that as long as the Pi is switched on the website will be available.\\ 
+Apache web hosting will be used to host the Raspberry Spi website. Apache will continue running as a background process. While the Pi is handling motion detection, taking photos the website will be accessible and process requests received. Apache will run as soon as the Pi boots. This means that as long as the Pi is switched on the website will be available for users to access.\\ 
 
 \noindent
 {\bf Motion:}\\
 \break
 Motion is an external program that will be installed and used to handle the video live streaming.\\
 
-After Motion has been installed it can be configured in many ways. From which port the video will stream, how many FPS (frames per second) are displayed to whether the live stream should be saved.\\
+After Motion has been installed it can be configured in many ways, from which port the video will stream, how many FPS (frames per second) are displayed, to whether the live stream footage should be saved and where to be saved.\\
 
-Motion does have a motion detection feature that is available to use. This project will use OpenCV to take care of the motion detection and because of this that particular feature will not be used.\\
+Motion does have a motion detection feature that is available to use. This project will use OpenCV to take care of the motion detection and therefore the motion detection feature will not be used.\\
 
 \clearpage
 \section{Additional Requirements}	
 \label{sec:additional}
-Aside from the mentioned hardware and software in the previous section there are other requirements and additional features that an end user must set up.\\
+Aside from the previously mentioned hardware and software in this section there are other requirements and additional features that an end user must set up.\\
 
 \noindent
 {\bf Port Forwarding:}\\
 \break
-With the Raspberry Spi being set up on a home network port forwarding needs to be enabled. This project will not be able to work unless port forwarding is set up.\\
+With the Raspberry Spi being set up on a home network, port forwarding needs to be enabled. This project will not be able to work unless port forwarding is set up.\\
 
 A port is simply a communication channel or an endpoint. Port forwarding means that when a request is received by the router on a particular port it will know which device on the network to send the request on to.\\
 
 Port forwarding will be different for each users router. For this reason no explanation is given on how to set up port forwarding and the end user will need to consult their router manual or search for the answer online.\\
 
-A list of ports that need to be open will be provided. Ports for video streaming are the only ports that can be changed and port 22 is optional. \\
+A list of ports that need to be opened will be provided. Ports for video streaming are the only ports that can be changed and port 22 for SSHing is optional. \\
 
 The following are ports that will be used:
 
@@ -273,24 +285,24 @@ The following are ports that will be used:
     \hline
     {\bf Port} & {\bf Port used for} \\ \hline
    80 & HTTP Requests (Website Requests) \\ \hline 
-   8000/9000 or 8080 & Video Live Streaming but can be changed\\ \hline
+   8000/9000 or 8080 & Video Live Streaming (Can be Changed)\\ \hline
 	22 & SSH into the Raspberry (Optional) \\ \hline
     \end{tabular}
     \\[0.5cm]
 \end{center} 
 
-Port 80 is necessary and until this port is open the Raspberry Spi website will not be accessible. Port 80 is responsible for all HTTP requests. With port 80 open when the router receives a HTTP request it will know which device on the network to send the request to.\\
+Port 80 is necessary and until this port is open the Raspberry Spi website will not be accessible. Port 80 is responsible for all HTTP requests. With Port 80 open when the router receives a HTTP request it will know which device on the local network to send the request on to.\\
 
-Port 22 is optional and will depend on how the end user will interact and make changes on the Raspberry Pi itself. If port 22 is open this will allow a user to SSH directly into it. SSH means that they can use the IP address of the Pi and log into it from another machine. SSHing into the Pi will let the user make changes from another computer instead of using the Raspberry and having to attach a keyboard and mouse which depending on where the Raspberry is set up could prove difficult.\\
+Port 22 is optional and will depend on how the end user wishes to interact or make changes on the Raspberry Pi itself. If Port 22 is open this will allow a user to SSH (Secure Shell) directly into it. SSH means that they can use the IP address of the Pi and log into it from another machine. SSHing into the Pi will let the user make changes from any computer instead of using the Raspberry and having to attach a keyboard and mouse which depending on where the Raspberry is set up could prove to be difficult.\\
 
 Port 8000/9000 or 8080 is going to be used for live streaming. This port can be changed but will default to one of these ports. Changing the port that will be used for live streaming can be done in the Motion configuration file.\\
 
 \noindent
 {\bf A browser with JavaScript enabled:}\\
 \break
-This project has a JavaScript function in one of the web pages. Due to this using a browser that has JavaScript enabled needs to be used when viewing the website. The website will still appear but the function taken care of by the JavaScript will be unavailable without the user knowing.\\
+This project has a JavaScript function in one of the web pages. Due to this, using a browser that has JavaScript enabled needs to be used when viewing the website. The website will still appear but the function taken care of by the JavaScript will be unavailable without the user knowing.\\
 
-This issues is only going to affect the user if they view the website on the Pi itself as most broswers for computers these days do in fact have JavaScript installed. If a user decides to view the website on the Raspberry Pi the only browser currently available and that has JavaScript enabled is Chromium.\\
+This issue is only going to affect the user if they view the website on the Pi itself as most browsers for computers these days do in fact have JavaScript installed. If a user decides to view the website on the Raspberry Pi the only browser currently available that has JavaScript enabled is Chromium.\\
 %
 %
 \chapter{Implementation}
