@@ -536,43 +536,44 @@ The video live streaming option on the home page of the web application does not
 \section{Testing Motion Detection}
 \label{sec:motionTest}
 %
-To get motion detection working effectively while not overpowering the Pi causing it to be unable to process anything else took some testing to get it just right. Motion Detection on a computer not a Pi would usually read in every frame from a video stream and would process each of the frames looking for motion. The Pi would be capable of such a task but for this project the Pi is expected to keep a website running and be able to process requests that it receives all while the motion detection is running.\\
 
- To do this not every frame is read in but finding out the correct number of frames to skip and still be able to detect motion is where most of the testing took place. The same object of a book was used for each test. It was held in front of the camera and moved from one side of the frame to the other. The test was started at skip ten frames and read in that frame. Skipping ten frames was unsuccessful as it never caught any motion. If it did it only caught the end which is not very useful. \\
+It took a lot of testing in order for motion detection to work effectively while not overpowering the Pi and causing it to be unable to process anything else. Motion Detection on a computer not a Pi would usually read in every frame from a video stream and would process each of the frames looking for motion. The Pi is capable of such a task but for this project it is expected to keep a website running and be able to process all the requests that it receives as the motion detection is running in the background.\\
 
-Ten frames was reduced down to five frames and the test was repeated. It proved to work much better but it still didn’t catch all motion that was happening. Again the frames being skipped was reduced down to three frames. This test proved to be the most successful as motion was detected much better and it did not interfere with the web application. \\
+To do this not every frame is read in but finding out the correct number of frames to skip and still be able to detect motion is where most of the testing took place. A book was the object used for each motion detection test. The book was held in front of the camera and moved from one side of the frame to the other. The test started at skip ten frames which means that each following tenth frame was used. Skipping ten frames was unsuccessful as it occasionally only caught the end of any motion that was happening.\\
 
-The frames were reduced to having no skips but then motion detection started interfering with the web application and making the web pages have a delay in being displayed. This proved that skipping a set amount of frames helps.\\
+Skipping ten frames was reduced down to skipping five frames and the test was repeated. It proved to work much better but it still did not catch all the motion that was happening. The frames being skipped was reduced down to three frames. This test proved to be the most successful as motion was detected much better and it did not interfere with the web application.\\
+
+The frames were reduced to having no skips but then motion detection started interfering with the web application and caused the web pages a delay in being displayed. This proved that it was necessary to skip a certain set of frames.\\
 
 \section{Testing Raspberry Spi Web Application}
 \label{sec:websiteTest}
 %
-After motion detection was found to be working as planned and correctly the website was tested to see if the Pi was still able to process requests while motion detection was running in the background.\\
+Once motion detection was found to work correctly and as planned the website was tested to see if the Pi was able to process requests while motion detection was running in the background.\\
 
 For this test motion detection was started and different test users were asked to log into the website and go through all the images stored on the Pi. Objects were then moved on front of the camera so that motion detection would start saving images.\\ 
 
-From this test images from the motion detection were successfully saved and no user had any issues or delays logging in or in accessing the photos\\
-
+From this test images from the motion detection were successfully saved and no user had any issues or delays logging in or in accessing the photos.\\
 
 \section{Testing Real Time Photo}
 \label{sec:realPhotoTest}
 %
 
-Testing a real time photo was done by placing different objects on front of the camera and when a real time photo was taken seeing if they would appear. \\
+Testing a real time photo was done by placing different objects in front of the camera and when a real time photo was taken seeing if they would appear.\\
 
-All photos are saved with a timestamp but this test was to ensure that the photo was in fact recently taken but the image was updating when being viewed on the webpage.\\
+All photos are saved with a timestamp but this test was to ensure that the photo was in fact taken recently but the image was updating when viewed on the web page.\\
 
 
 \section{Testing Live Streaming}
 \label{sec:liveStreamTest}
 %
-Live Streaming was tested not using the web application but on a localhost connection. To test if the stream was live and if the the frames per second (FPS) were correct I walked from one side of the frame to the other. 
-Live streaming was tested with the website as well but it caused several issues from taking down Apache and causing the web page to be unavailable to effecting the wifi connection on the Pi.
+Live Streaming was tested on a localhost connection and not through the web application. To test if the stream was live and if the the frames per second (FPS) were correct a subject walked from one side of the frame to the other. This test was a success.\\
+ 
+When testing live streaming with the website it caused several issues such as taking down and stopping Apache, causing the web page to be unavailable and effecting the Wifi connection on the Pi.
 
 \section{Testing Photo Storage}
 \label{sec:photoStorageTest}
 %
-To test if photos were being stored on the Pi real time photos were taken and the time was taken  so the it could be compared to the timestamp. The web address where all photos are stored was checked to see if the image appeared with the correct time stamp and the expected photo appeared. All photos taken from either feature appeared in a swift manner available to be viewed. Timestamps and dates on each photo were also always correct.\\
+To test if the photos were being stored on the Pi, real time photos were taken and the time was recorded so it could compared to the timestamp. The web address where all photos are stored was checked to see if the image appeared with the correct time stamp and the expected photo. All photos taken from either feature appeared in a swift manner and available for viewing. Timestamps and dates on each photo were also always correct.\\
 
 
 \chapter{Conclusion}
@@ -584,9 +585,10 @@ To test if photos were being stored on the Pi real time photos were taken and th
 %
 The aim of this project was to built a new kind of security system that is affordable and easy to use but also effective. Raspberry Spi has achieved what was set out to create. It is an affordable set up that is both easy to use and easy to control. Users are able to view photos previously taken or captured from motion detection, live stream video or start and stop motion detection all from a web application that is successfully hosted on the Pi. \\
 
-Various changes can be made to match each user depending on their preference. It can have multiple real life uses for varying end users. Being set up on a home network allows for having full control over the system from who can access the Raspberry to the resolution of images being used. All features can be changed if they do not act how an end user would like.\\
+Various changes can be made to match each user depending on their preference. It can have multiple real life a for varying end users. Being set up on a home network allows for having full control over the system from who can access the Raspberry to the resolution of images being used. All features can be changed if they do not act how an end user would prefer them to.\\
 
-All of the Raspberry Spi code is completely open source and is available to download from github. This project has been made open source because it will allow for endless possibilities of additional extras to be added to it by other people. Many different people might see this project in a different way and could add to it their own completely unique and different ideas.\\
+All of the Raspberry Spi code is completely open source and is available to download from github. This project has been made open source because it will allow for endless possibilities of additional extras to be added to it by other people. Many different people might see this project in a different way and could add their own completely unique and different ideas.\\
+
 % \cite{notes}
 \noindent
 {\bf Raspberry Spi Code is available here:\\}
@@ -594,23 +596,21 @@ All of the Raspberry Spi code is completely open source and is available to down
 
 
 
-
 \section{Future Work}
 \label{sec:future}
 
-The video streaming does not work well or efficiently. To continue working on this project this area would involve either going into a completely new direction by trying a different way to do live streaming or continue using using the current method of the program Motion but try to implement it working better alongside Apache.\\
+The video streaming does not work well or efficiently. To continue work on this project would involve either going in a completely new direction by trying a different way to do live streaming or continue using the current method of the program Motion but try to implement it working better alongside Apache.\\
 
-A different approach to this project would be to use the PiNoir camera which is specifically designed to only works at night time and has no infrared filter. The camera would connect in the exact same way the Raspberry Pi camera module does. It would be a Raspberry Spi project for during the night.\\
+A different approach to this project would be to use the PiNoir camera which is specifically designed to only work at night time and has no infrared filter. The camera would connect in the exact same way the Raspberry Pi camera module does. It would be a Raspberry Spi project for during the night.\\
 
-Lastly another small and simple feature of setting up notifications could be added in the future. When motion is started a user is most likely not going to be refreshing the web address where the photos are displayed waiting for some new images to appear. They would start motion detection, leave the web page and check back for any new images at a later stage. Notifications could be set up so if there is a lot of motion happening and being detected the Pi would simply send a notification of an email to the user that something has been detected and a photo of the motion that was captured could be attached
-.\\
+Lastly another small and simple feature of setting up notifications could be implemented in the future. When motion detection begins a user is most likely not going to refresh the web address where the photos are displayed waiting for new images to appear. They would start motion detection, leave the web page and check back for any new images at a later stage. Notifications could be set up so if there is a lot of motion being detected the Pi would simply send a notification of an email to the user that something has been detected and a photo of the motion that was captured could be attached.\\
 
 \section{Expansion Work}
 \label{sec:expansion}
 
-Raspberry Spi has been created as a system that is to be used in a home. But it could be set up in other places that could use features like motion detection, live video streaming and storing this information. An area like farming could use a project like this to keep an eye on a livestock building. A building of that size couldn’t be monitored at all times but the Raspberry Spi would allow for monitoring to happen while there are no persons catering to the building.
+Raspberry Spi has been created as a system that is to be used in a home. But it could be set up in other places that could use features like motion detection, live video streaming and storing this information. An area like farming could use a project like this to keep an eye on a livestock building. A building of that size couldn’t be monitored at all times but the Raspberry Spi would allow for monitoring to happen while there are no people overseeing to the building.\\
 
-Further expanding this project would be adding in more Raspberry Pis to the system. One Pi per room or as many as preferred. One Pi would act as a central server controlling the web pages and the other Pis on the system would handle taking photos, motion detection and live streaming. \\
+Further expanding of this project would involve adding in more Raspberry Pis to the system creating a distributed system. One Pi per room or as many as preferred. One Pi would act as a central server controlling the web pages and the other Pis on the system would handle taking photos, motion detection and live streaming.\\
 
 %RaspberrySpi Logo SPY guy
 \newpage

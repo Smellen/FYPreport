@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.4.14)  19 APR 2014 21:48
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.4.14)  19 APR 2014 22:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1080,51 +1080,43 @@ Underfull \hbox (badness 10000) in paragraph at lines 511--512
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 513--514
+Underfull \hbox (badness 10000) in paragraph at lines 514--515
 
  []
 
 [30 <../../Pictures/raspberrySPYstart.png> <../../Pictures/raspberrySPYstop.png
 >]
-Underfull \hbox (badness 10000) in paragraph at lines 515--516
+Underfull \hbox (badness 10000) in paragraph at lines 516--517
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 522--523
+Underfull \hbox (badness 10000) in paragraph at lines 523--524
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 524--525
+Underfull \hbox (badness 10000) in paragraph at lines 525--526
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 526--527
+Underfull \hbox (badness 10000) in paragraph at lines 527--528
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 528--529
+Underfull \hbox (badness 10000) in paragraph at lines 529--530
 
  []
 
 [31]
 Chapter 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 538--539
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 540--541
 
  []
 
-Missing character: There is no â in font cmr12!
-Missing character: There is no € in font cmr12!
-Missing character: There is no ™ in font cmr12!
 
 Underfull \hbox (badness 10000) in paragraph at lines 542--543
 
@@ -1135,14 +1127,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 544--545
 
  []
 
-[32
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 549--550
+Underfull \hbox (badness 10000) in paragraph at lines 546--547
 
  []
 
+[32
 
+]
 Underfull \hbox (badness 10000) in paragraph at lines 551--552
 
  []
@@ -1153,46 +1145,56 @@ Underfull \hbox (badness 10000) in paragraph at lines 553--554
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 560--561
+Underfull \hbox (badness 10000) in paragraph at lines 555--556
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 562--563
+Underfull \hbox (badness 10000) in paragraph at lines 561--562
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 563--564
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 569--570
 
  []
 
 [33]
-Underfull \hbox (badness 10000) in paragraph at lines 574--575
+Underfull \hbox (badness 10000) in paragraph at lines 576--577
 
  []
 
 [34]
 Chapter 5.
 
-Underfull \hbox (badness 10000) in paragraph at lines 584--585
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 586--587
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 600--601
+Underfull \hbox (badness 10000) in paragraph at lines 588--589
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 602--603
 
  []
 
 [35
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 602--603
+Underfull \hbox (badness 10000) in paragraph at lines 604--605
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 604--606
+Underfull \hbox (badness 10000) in paragraph at lines 606--608
 
  []
 
@@ -1200,7 +1202,7 @@ Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ™ in font cmr12!
 
-Underfull \hbox (badness 10000) in paragraph at lines 612--613
+Underfull \hbox (badness 10000) in paragraph at lines 614--615
 
  []
 
@@ -1208,7 +1210,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 612--613
 File: ../../Pictures/raspberrySPY.png Graphic file (type png)
 
 <use ../../Pictures/raspberrySPY.png>
-Package pdftex.def Info: ../../Pictures/raspberrySPY.png used on input line 618
+Package pdftex.def Info: ../../Pictures/raspberrySPY.png used on input line 620
 .
 (pdftex.def)             Requested size: 301.12425pt x 200.7495pt.
  [38 <../../Pictures/raspberrySPY.png>]
@@ -1233,7 +1235,7 @@ are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on RaspberrySpiReport.pdf (43 pages, 1797126 bytes).
+Output written on RaspberrySpiReport.pdf (43 pages, 1797180 bytes).
 PDF statistics:
  189 PDF objects out of 1000 (max. 8388607)
  117 compressed objects within 2 object streams
