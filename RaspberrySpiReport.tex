@@ -255,11 +255,11 @@ For this project OpenCV will be used when taking a real time photo and during mo
 \noindent
 {\bf UV4L (Universal Video 4 Linux):}\\
 \break
-The camera module has it's own default driver and it is called RaspiCam. RaspiCam does not work properly with OpenCV. Since OpenCV is used frequently throughout this project UV4L is needed.\\
+The camera module has it's own default driver and it is called RaspiCam. RaspiCam does not integrate fully with OpenCV. Since OpenCV is required frequently throughout this project UV4L is needed.\\
 
-When OpenCV tries to locate a camera it looks for a device ID. The camera module does have a device ID but it's not an integer value. It is the value 'pi' and because of this OpenCV cannot use the camera module with it's default drivers. To get around this driver problem UV4L (Universal Video 4 Linux) is used instead. UV4L will create a device node from the given driver Raspicam. OpenCV will not be able to tell the difference but it will be able find and access the camera module.\\
+When OpenCV tries to locate a camera it looks for a device ID. The camera module does have a device ID but it's not an integer value. It is the value 'pi' and because of this OpenCV cannot use the camera module with it's default drivers. To resolve this driver issue UV4L (Universal Video 4 Linux) is used instead. UV4L will create a device node from the given driver Raspicam. OpenCV will be unable to differenciate any change but it wo;; be able to fina and access the camera module.\\
 
-When using this driver the UV4L initializing script must be run. It can be added to the Raspberry's start up script or can be called after each boot. The parameters passed in can be interchangeable. \\
+When using this driver the UV4L initializing script must be executed. By adding it to the Raspberry's start up script or can be called after each boot. The parameters passed in can be interchangeable. \\
 
 
 \noindent
