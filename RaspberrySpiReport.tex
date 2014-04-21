@@ -108,7 +108,8 @@ Therefore the decision was made to have this project controlled through a web ap
 	One of the main aims of this project is to make it easy for users to set up regardless of their background. With this in mind there are relatively few hardware components required for the Raspberry Spi such as the Raspberry Pi Model B itself, Raspberry Pi Model B case, Raspberry Pi Camera Module and the SD card.\\
 	 
 Additional items such as a keyboard and mouse are only needed for initial set up and depending on the users preference of how they will access the Pi to make changes. Some hardware components are also just additional extras for more control of the Raspberry Spi. There are also suggested hardware items such as a USB hub powered externally and a Wifi adapter should the user feel they are required.\\
-	
+
+
 \section{Hardware}	
 \label{sec:hardware}
 
@@ -449,16 +450,18 @@ Motion detection is done by using the OpenCV library. The method chosen for moti
 
 OpenCV has an inbuilt function called {\it absdiff()}. This method takes in two coloured (RGB) frames. The two frames are then subtracted from one another producing a new RGB image that contains the differences if any. RGB images are not useful when looking for changes so the difference image is converted to grayscale. This means that the image will only contain black and white pixels making it easier to see if there are any changes from one frame to the next. If there are no changes the image will only contain black pixels. When there are changes white pixels will appear. The white pixels are counted and if there are more pixels then a set threshold then motion has been detected.\\
 
+Pseudo code for motion detection:\\
 
+{\centering
 	{\it absdif(prevFrame - nextFrame = difference)\\}
 
 	{\it  grayscale(difference)\\}
 
 	{\it  checkWhiteCount (difference)	\\}
 	
-	{\it  if WhiteCount is above threshold save images	\\}
-
-
+	{\it  if WhiteCount is above threshold save images\\}}
+\vspace{5mm}
+\noindent
 If motion is detected the RGB frames that were originally read in are saved. Since the difference image will not mean anything it will not be saved. If motion is detected then the images are not saved and new images are read in and the process repeats.\\ 
 
 
@@ -523,14 +526,14 @@ Screen shots from the motion detection section on the web application:
 Below are the icons in a larger form which are used to tell a user if motion detection is running or not.
 
 \begin{figure}[H]
-  \begin{minipage}[b]{0.62\linewidth}
+  \begin{minipage}[b]{0.60\linewidth}
     \centering
     \includegraphics [width=\linewidth]{../../Pictures/raspberrySPYstart.png} 
     \caption{Motion Detection Start icon}
     \label {fig:start}
   \end {minipage}
   \hspace{0.5cm}
-  \begin{minipage}[b]{0.62\linewidth}
+  \begin{minipage}[b]{0.60\linewidth}
     \centering
     \includegraphics [width=\linewidth]{../../Pictures/raspberrySPYstop.png} 
     \caption{Motion Detection Stop icon}
