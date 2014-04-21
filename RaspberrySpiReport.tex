@@ -10,16 +10,16 @@
 \begin{titlepage}
 
 	\centering\
-	\textsc{\huge University of Dublin} \\ [1.5cm]
+	\huge University of Dublin \\ [1.5cm]
 
 \includegraphics [scale=0.6]{../../trinityCollege.jpg} \\[1.5cm]
-	\textsc{\huge Trinity College}\\ [0.5cm]
-	\textsc{\large Raspberry Spi}\\ [0.5cm]
+	\huge Trinity College\\ [0.5cm]
+	\Large Raspberry Spi\\ [0.5cm]
 
-Ellen Marie Burke  \\ B.A. (Mod.) Computer Science \\ Final Year Project April 2014 \\ Supervisor: Fergal Shevlin \\[2.0cm]
+\normalsize Ellen Marie Burke  \\ B.A. (Mod.) Computer Science \\ Final Year Project April 2014 \\ Supervisor: Fergal Shevlin \\[2.0cm]
 
-	\textsc{\large School of Computer Science and Statistics} \\ 
-	\textsc{\large O'Reilly Institute, Trinity College, Dublin 2, Ireland} \\ 
+	\large School of Computer Science and Statistics \\ 
+	\large O'Reilly Institute, Trinity College, Dublin 2, Ireland \\ 
 \end{titlepage}
 
 
@@ -35,7 +35,7 @@ Ellen Marie Burke  \\ B.A. (Mod.) Computer Science \\ Final Year Project April 2
 
 \begin{abstract}
 	\textsc{\huge Acknowledgements} \\[2.0cm]
-  Thank you to everyone who has helped me throughout this project. 
+I would like to thank my supervisor Fergal Shevlin for all his help throughout this project, Arissa Brown for reviewing my website and answering all my web development questions, Christina Lynch for proofreading this report and fixing my English, my cat Shinique for helping with motion detection testing, my family and everyone else who helped me get through this project by giving feedback or testing this project. 
 \end{abstract}
 
 \begin{abstract}
@@ -49,7 +49,7 @@ This project will implement the most popular features such as motion detection, 
 \chapter{Introduction}
 \label{ch:intro} 
 
-Home security systems have been available for a number of years. Most are quite expensive and can be predominant in the household. The camera utilized in them may not have the potential to transmit 1080p video which would enable for high definition imagery. 
+Home security systems have been available for a number of years. They can be either pre built or created at home, but most can be quite expensive and can be predominant in the household. In either set up the camera utilized may not have the potential to transmit 1080p video which would enable for high deﬁnition imagery. Without the high deﬁnition imagery features on the system may not be effective or easy to get information from them. Live streaming footage may be pixelated causing frames to be unclear and movement unclear or images detected by motion detection could be useless as nothing can be seen clearly.
 
 \section{Motivation/Problem}
 \label{sec:motprob}
@@ -125,8 +125,10 @@ The following is a list of hardware components:\\
 Below is the listed components and how they will be used for this project.
 
 \noindent\\
-{\bf Raspberry Pi Model B:} \\
-\break
+%{\bf Raspberry Pi Model B:} \\
+\subsection{Raspberry Pi Model B}
+\label{subsec:raspberrypimodB}
+%\break
 The Raspberry Pi is described as a credit card sized computer. There are two available models Model A and Model B, this project has been implemented using a Raspberry Pi Model B. The features available on a Model B are:\\
 
 \begin{itemize}
@@ -156,8 +158,10 @@ Raspberry Pi Model A is still the same size as the Model B except it's slightly 
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \noindent
-{\bf Raspberry Pi Model B Case:} \\ 
-\break
+%{\bf Raspberry Pi Model B Case:} \\ 
+\subsection{Raspberry Pi Model B Case}
+\label{subsec:raspberrypicase}
+%\break
 Most Raspberry Pi's are not sold with a protective case. The case is essential because otherwise the Pi will have no protection and can get damaged very easily. \\ 
 
 The other advantage to the Model B case is that there is space for the camera module to attach to the CSI connector on the Pi board. Model A cases do not have a space for the camera to attach to the CSI connector and this makes attaching the camera very difficult.\\
@@ -165,8 +169,10 @@ The other advantage to the Model B case is that there is space for the camera mo
 
 \clearpage %newpage
 \noindent
-{\bf Raspberry Pi Camera Module:} \\
-\break
+%{\bf Raspberry Pi Camera Module:} \\
+\subsection{Raspberry Pi Camera Module}
+\label{subsec:raspberrypicammod}
+%\break
 The camera module is a camera that has been designed specifically with the Raspberry Pi in mind. It attaches directly into the Pi to the CSI connector by a ribbon cable rather than USB. The CSI (Camera Serial Interface) connector exclusively carries pixel data. This means that the camera module is capable of extremely high data rates and images would be sent to the Pi quicker then if a camera attached by USB would.\\
 
 The camera itself is not expensive and costs approximately 20 Euro. It will work instantly once it is properly attached to the Pi board. To connect the camera, the ribbon cable is simply inserted into the CSI connector on the Pi board. The camera is capable of outputting images and video of very high quality, the max resolution the camera is capable of is 2592 x 1944. For video the camera is capable of capturing footage in 1080p quality. 
@@ -194,8 +200,10 @@ There is an infrared (IR) filter on the camera and therefore it cannot detect IR
 
 
 \noindent
-{\bf USB Hub powered externally:}\\
-\break
+%{\bf USB Hub powered externally:}\\
+\subsection{USB Hub powered externally}
+\label{subsec:usb}
+%\break
 
 A USB Hub is a device that expands one USB slot into several depending on how many are available on the device and is recommended when attaching any components to the Pi by USB. If any component is connected to the two USB slots on the Pi, it will draw power from the Pi itself and could cause the Pi to heat up and some features not to work properly. \\
 
@@ -207,15 +215,19 @@ An externally powered USB hub will allow for the Pi to avoid overheating and cre
 There is no prerequisite USB Hub to be used.\\
 
 \noindent
-{\bf Wifi Adapter:}\\
-\break
+%{\bf Wifi Adapter:}\\
+\subsection{Wifi Adapter}
+\label{subsec:wifi}
+%\break
 When connecting to the internet a Wifi Adapter is recommended as it will be more useful than connecting to the internet by an Ethernet cable. By using an adapter it would avoid hiding another cable and overall make this project neater to set up.\\
 
 Using a Wifi Adapter is not a requirement for this project but  more a recommendation. This is a decision for the end user to make.\\
 
 \noindent
-{\bf SD card:}\\
-\break
+%{\bf SD card:}\\
+\subsection{SD card}
+\label{subsec:sdcard}
+%\break
 An SD card will act as storage for the Pi. Most Raspberry Pi's do not come with an SD card and must be bought separately. The Raspberry Pi has no internal memory so an external storage component is required. An operating system will be loaded onto it and will also store all captured images.\\
 
 Users have the option of implementing external hard drives if required for storing images.\\
@@ -240,14 +252,18 @@ The following is a list of all the software that will need to be installed:\\
 Below is the listed software required and what they will be used for in this project.
 
 \noindent
-{\bf Operating System - Raspbian:}\\
-\break
+%{\bf Operating System - Raspbian:}\\
+\subsection{Operating System - Raspbian}
+\label{subsec:raspbian}
+%\break
 With the Raspberry Pi there are several operating systems that can be chosen. This project uses the operating system (OS) Raspbian because it is the most popular OS for the Pi. As it is easy to debug problems and solve issues that arise due to the large amount of online resources.\\
 
 Raspbian is free to download and it is based off of the operating system Debian but it has been optimized to work on a Raspberry Pi. \\ 
 
 \noindent
-{\bf OpenCV:}\\
+%{\bf OpenCV:}\\
+\subsection{OpenCV}
+\label{subsec:OpenCV}
 \break
 
 OpenCV is a free to use cross platform computer vision library that was created for the purpose of processing real time images and video.\\
@@ -255,8 +271,10 @@ OpenCV is a free to use cross platform computer vision library that was created 
 For this project OpenCV will be used when taking a real time photo and during motion detection to determine if motion has actually occurred.\\
 
 \noindent
-{\bf UV4L (Universal Video 4 Linux):}\\
-\break
+%{\bf UV4L (Universal Video 4 Linux):}\\
+\subsection{UV4L (Universal Video 4 Linux)}
+\label{subsec:UV4L}
+%\break
 The camera module has it's own default driver and it is called RaspiCam. RaspiCam does not integrate fully with OpenCV. Since OpenCV is required frequently throughout this project UV4L is needed.\\
 
 When OpenCV tries to locate a camera it looks for a device ID. The camera module does have a device ID but it's not an integer value. It is the value 'pi' and because of this OpenCV cannot use the camera module with it's default drivers. To resolve this driver issue UV4L (Universal Video 4 Linux) is used instead. UV4L will create a device node from the given driver Raspicam. OpenCV will be unable to differenciate any change but it wo;; be able to fina and access the camera module.\\
@@ -265,13 +283,17 @@ When using this driver the UV4L initializing script must be executed. By adding 
 
 
 \noindent
-{\bf Apache:}\\
-\break
+%{\bf Apache:}\\
+\subsection{Apache}
+\label{subsec:Apache}
+%\break
 Apache web hosting will be used to host the Raspberry Spi website. Apache will be permanently running as a background process. While the Pi is handling motion detection, taking photos the website will be accessible and process requests received. Apache will be available as soon as the Pi boots this means that as long as the Pi is switched on the website will be available for users to access.\\ 
 
 \noindent
-{\bf Motion:}\\
-\break
+%{\bf Motion:}\\
+\subsection{Motion}
+\label{subsec:motion}
+%\break
 Motion is an external program that will be installed and it implements the video live streaming.\\
 
 After Motion has been installed it can be configured in multiple ways, from which port the video will stream, how many (Frames Per Second)FPS are displayed, to whether the live stream footage should be saved and where to be saved.\\
@@ -284,8 +306,10 @@ Motion does have a motion detection feature that is available to use. This proje
 Aside from the previously mentioned hardware and software in this section there are other requirements and additional features that an end user must set up.\\
 
 \noindent
-{\bf Port Forwarding:}\\
-\break
+%{\bf Port Forwarding:}\\
+\subsection{Port Forwarding}
+\label{subsec:portfwd}
+%\break
 With the Raspberry Spi being set up on a home network, port forwarding needs to be enabled. This is a requirement to ensure this application can work.\\
 
 A port is simply a communication channel or an endpoint. Port forwarding means that when a request is received by the router on a particular port it will know which device on the network to send the request on to. Port forwarding will be different for each users router. For this reason no explanation is given on how to set up port forwarding and the end user will need to consult their router manual or access the many online resources for further information.\\
@@ -312,8 +336,10 @@ Port 22 is optional and is dependant on the end users requirements to interact o
 Port 8000/9000 or 8080 will be used for live streaming. This port can be changed but will default to one of these ports. Modifying the port that will be used for live streaming can be done in the Motion configuration file.\\
 
 \noindent
-{\bf A browser with JavaScript enabled:}\\
-\break
+%{\bf A browser with JavaScript enabled:}\\
+\subsection{A browser with JavaScript enabled}
+\label{subsec:javascript}
+%\break
 This project has a JavaScript function in one of the web pages. Due to this, using a browser that has JavaScript enabled needs to be used when viewing the website. The website will still appear if there is no JavaScript is JavaScript dependant will be unavailable without the user knowing.  This issue will only affect the user if they view the website on the Pi itself as most browsers for modern day computers have JavaScript pre-installed. If a user decides to view the website on the Raspberry Pi the only browser currently available that has JavaScript enabled is Chromium.\\
 %
 %
