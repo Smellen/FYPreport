@@ -4,7 +4,10 @@
 \usepackage{abstract}
 \usepackage{caption}
 \usepackage{float} 
-\usepackage{subcaption}
+\usepackage{subcaption} 
+\usepackage{url}
+ 
+  
      
 \begin{document}
 \begin{titlepage}
@@ -23,7 +26,7 @@
 \end{titlepage}
 
 
-
+% Declaration
 \renewcommand{\abstractname}{}% Remove the word abstract
 \renewcommand{\absnamepos}{empty}
 \begin{abstract}
@@ -33,6 +36,16 @@
 	\textbf{Ellen Marie Burke 23rd April 2014}
 \end{abstract}
 
+% Permission To Lend
+\chapter*{Permission to Lend}
+
+I agree that the Library and other agents of
+the College may lend or copy this thesis upon request.\\[1.0cm]
+
+\noindent
+Ellen Marie Burke 23rd April 2014
+
+% Abstract
 \begin{abstract}
 	\textsc{\huge Acknowledgements} \\[2.0cm]
 I would like to thank my supervisor Fergal Shevlin for all his help throughout this project, Arissa Brown for reviewing my website and answering all my web development questions, Christina Lynch for proofreading this report and fixing my English, my cat Shinique for helping with motion detection testing, my family and everyone else who helped me get through this project by giving feedback or testing this project. 
@@ -40,23 +53,23 @@ I would like to thank my supervisor Fergal Shevlin for all his help throughout t
 
 \begin{abstract}
 \textsc{\huge Abstract}  \\[1.0cm]
-Security systems are more frequently being set up in homes in current times due the the technology available. They can be bought pre built or created at home. Not all are being used for security purposes some are simply set up to check on pets while nobody is home throughout the day or for checking on small children without being intrusive while they are playing or sleeping.\\
+Security systems are more frequently being set up in homes in current times due to the technology available. They can be bought pre built or created at home. Not all are being used for security purposes some are simply set up to check on pets while nobody is home throughout the day or for checking on small children without being intrusive while they are playing or sleeping.\\
 
-This project will implement the most popular features such as motion detection, live streaming and media storage into an affordable system that can be set up  in a home by a user allowing them full control over the system which allows for customization of features or adding on additional features.\\
+This project will implement the most popular features such as motion detection, live streaming and media storage into an affordable system that can be set up  in a home by a user enabling them to have full control over the system which allows for customization of features or adding on additional features.\\
 \end{abstract}
 
 \tableofcontents
 \chapter{Introduction}
 \label{ch:intro} 
 
-Home security systems have been available for a number of years. They can be either pre built or created at home, but most can be quite expensive and can be predominant in the household. In either set up the camera utilized may not have the potential to transmit 1080p video which would enable for high definition imagery, without the high definition imagery features on the system may not be effective or easy to get information from them, live streaming footage may be pixelated causing frames to be unclear and movement unclear or images detected by motion detection could be useless as nothing can be seen clearly.
+Home security systems have been available for a number of years. They can be either pre built or created at home, but most can be quite expensive and can be easily visible around the household. In either set up the camera utilized may not have the potential to transmit 1080p video which would enable for high definition imagery, without the high definition imagery features on the system may not be effective or easy to get information from. Live streaming footage may be pixelated causing frames to be unclear and movement unclear or images detected by motion detection could be useless as nothing can be seen clearly.
 
 \section{Motivation/Problem}
 \label{sec:motprob}
 % Aim & What is Raspberry Spi?
 The aim of this project is to create a home security system that is affordable, easy to setup and use by anyone. It will be affordable and easy to operate for all kinds of end users.\\
 
-The Raspberry Spi  users will have the ability to install the system and control it.  It has a wide range of possibilities for adaptation allowing the user to change the current settings or extending the functionality.\\
+The Raspberry Spi  users will have the ability to install the system and control it.  It has a wide range of possibilities for adaptation allowing the user to change the current settings or extend the functionality.\\
 
 In comparison to standard security systems, the size, cost and user control capability of The Raspberry Spi ensures that it is an excellent substitute. For the end user, the cost of the Pi is approximately 30 Euro and the camera module 20 Euro. The size of the Pi is significantly smaller than standard security systems with dimensions of 85.60mm x 56mm x 21mm and the camera module would be a minor addition.\\
 
@@ -85,10 +98,10 @@ For this project live streaming is a feature but by default the entire footage c
 
 Motion detection is a popular feature in most security systems and instead of live streaming motion detection would constantly run in the background and only when a change occurs would the image be saved. \\
 
-Before this project Security systems could be bought either pre made or built by a person using a web camera. A pre built home security system when set up would provide a feed but gave no control to the user as no features or changes could be added to it.The downside to a pre built system is that they can be quite expensive to acquire and maintain or repair if needed. The cameras available for pre built systems could be difficult when setting up or controlled due to their size and the inability of the system to be customised.\\
+Before this project Security systems could be bought either pre made or built by a person using a web camera. A pre built home security system when set up would provide a feed but give no control to the user as no features or changes could be added to it.The downside to a pre built system is that they can be quite expensive to acquire and maintain or repair if needed. The cameras available for pre built systems could be difficult when setting up or controlled due to their size and the inability of the system to be customised.\\
 
 % Software used
-Systems set up and created by a users at home usually consist of a desktop or laptop with a USB connected web camera or simply just a IP camera which can be remotely accessed. These web cameras and IP cameras again could be expensive as the higher the quality desired the higher the cost would be. Like pre built systems the user may not have as much control over them depending on the software used. If pre installed software is used this may not allow a user to customise features to how they want them to behave.\\ 
+Systems set up and created by a user at home usually consist of a desktop or laptop with a USB connected web camera or simply just a IP camera which can be remotely accessed. These web cameras and IP cameras again could be expensive as the higher the quality desired the higher the cost would be. Like pre built systems the user may not have as much control over them depending on the software used. If pre installed software is used this may not allow a user to customise features to how they want them to behave.\\ 
 
 \subsection{Mobile App or Web Application}
 \label{subsec:Android}
@@ -123,15 +136,14 @@ The following is a list of hardware components:\\
   \item SD card\\
 \end{itemize} 
 
-Below is the listed components and how they will be used for this project.
+Below is the listed components and how they will be used for this project.\\
 
-\noindent\\
+\noindent
 %{\bf Raspberry Pi Model B:} \\
 \subsection{Raspberry Pi Model B}
 \label{subsec:raspberrypimodB}
 %\break
 The Raspberry Pi is described as a credit card sized computer. There are two available models, Model A and Model B, this project has been implemented using a Raspberry Pi Model B. The features available on a Model B are:\\
-
 \begin{itemize}
   \item ARM Processor capable of 700 MHz\\
   
@@ -159,7 +171,8 @@ Raspberry Pi Model A is still the same size as the Model B except it's slightly 
 \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \noindent
-%{\bf Raspberry Pi Model B Case:} \\ 
+%{\bf Raspberry Pi Model B Case:} 
+\newpage 
 \subsection{Raspberry Pi Model B Case}
 \label{subsec:raspberrypicase}
 %\break
@@ -168,13 +181,13 @@ Most Raspberry Pi's are not sold with a protective case. The case is essential b
 The other advantage to the Model B case is that there is space for the camera module to attach to the CSI connector on the Pi board. Model A cases do not have a space for the camera to attach to the CSI connector and this makes attaching the camera very difficult.\\
 
 
-\clearpage %newpage
+%\clearpage %newpage
 \noindent
 %{\bf Raspberry Pi Camera Module:} \\
 \subsection{Raspberry Pi Camera Module}
 \label{subsec:raspberrypicammod}
 %\break
-The camera module is a camera that has been designed specifically with the Raspberry Pi in mind. It attaches directly into the Pi to the CSI connector by a ribbon cable rather than USB. The CSI (Camera Serial Interface) connector exclusively carries pixel data. This means that the camera module is capable of extremely high data rates and images would travel to the Pi quicker then if a camera attached by USB would.\\
+The camera module is a camera that has been designed specifically with the Raspberry Pi in mind. It attaches directly into the Pi to the CSI connector by a ribbon cable rather than USB. The CSI (Camera Serial Interface) connector exclusively carries pixel data. This means that the camera module is capable of extremely high data rates and images would travel to the Raspberry Pi quicker then a USB camera.\\
 
 The camera itself is not expensive and costs approximately 20 Euro. It will work instantly once it is properly attached to the Pi board. To connect the camera, the ribbon cable is simply inserted into the CSI connector on the Pi board. The camera is capable of outputting images and video of very high quality, the max resolution the camera is capable of is 2592 x 1944. For video the camera is capable of capturing footage in 1080p quality. 
 
@@ -189,7 +202,7 @@ There is an infrared (IR) filter on the camera and therefore it cannot detect IR
 
 \begin{figure}[H]
 	\centering	
-	\includegraphics [scale=0.5]{../../Pictures/raspberry_pi_camera_board.jpg} 
+	\includegraphics [scale=0.3]{../../Pictures/raspberry_pi_camera_board.jpg} 
 	\caption{Raspberry Pi Camera Module\\}	
 \end{figure}
 \begin{figure}[H]
@@ -199,16 +212,15 @@ There is an infrared (IR) filter on the camera and therefore it cannot detect IR
 \end{figure}
 %{\vspace{5mm}}
 
-
 \noindent
 %{\bf USB Hub powered externally:}\\
-\subsection{USB Hub powered externally}
+\subsection{USB Hub Powered Externally}
 \label{subsec:usb}
 %\break
 
 A USB Hub is a device that expands one USB slot into several depending on how many are available on the device and is recommended when attaching any components to the Pi by USB. If any component is connected to the two USB slots on the Pi, it will draw power from the Pi itself and could cause the Pi to heat up and some features not to work properly. \\
 
-If the Raspberry is left on for several hours, as is the aim of this project, overheating may occur resulting in some features not to working properly.\\ 
+If the Raspberry Pi is left on for several hours, as is the aim of this project, overheating may occur resulting in some features not working properly.\\ 
 
 An externally powered USB hub will allow for the Pi to avoid overheating and create extra USB slots without affecting the Pi while it is operating.\\ 
 
@@ -225,7 +237,7 @@ Using a Wifi Adapter is not a requirement for this project but  more a recommend
 
 \noindent
 %{\bf SD card:}\\
-\subsection{SD card}
+\subsection{SD Card}
 \label{subsec:sdcard}
 %\break
 An SD card will act as storage for the Pi. Most Raspberry Pi's do not come with an SD card and must be bought separately. The Raspberry Pi has no internal memory so an external storage component is required. An operating system will be loaded onto it and will also store all captured images.\\
@@ -238,7 +250,7 @@ Users have the option of implementing external hard drives if required for stori
 \section{Software}	
 \label{sec:software}	
 % Software required
-This chapter will discuss the software that will be required throughout this project and it's requirements.\\
+This section will discuss the software that will be needed throughout this project and it's requirements.\\
 
 The following is a list of all the software that will need to be installed:\\
 \begin{itemize}
@@ -258,13 +270,14 @@ Below is the listed software required and what they will be used for in this pro
 %\break
 With the Raspberry Pi there are several operating systems that can be chosen. This project uses the operating system (OS) Raspbian because it is the most popular OS for the Pi. As it is easy to debug problems and solve issues that arise due to the large amount of online resources.\\
 
-Raspbian is free to download and it is based off of the operating system Debian but it has been optimized to work on a Raspberry Pi. \\ 
+Raspbian is free to download and it is based off of the operating system Debian GNU/Linux but it has been optimized to work on a Raspberry Pi. \\ 
 
+\newpage
 \noindent
 %{\bf OpenCV:}\\
 \subsection{OpenCV}
 \label{subsec:OpenCV}
-\break
+%\break
 
 OpenCV is a free to use cross platform computer vision library that was created for the purpose of processing real time images and video.\\
 
@@ -277,9 +290,9 @@ For this project OpenCV will be used when taking a real time photo and during mo
 %\break
 The camera module has it's own default driver and it is called RaspiCam. RaspiCam does not integrate fully with OpenCV. Since OpenCV is required frequently throughout this project UV4L is needed.\\
 
-When OpenCV tries to locate a camera it looks for a device ID. The camera module does have a device ID but it's not an integer value. It is the value 'pi' and because of this OpenCV cannot use the camera module with it's default drivers. To resolve this driver issue UV4L (Universal Video 4 Linux) is used instead. UV4L will create a device node from the given driver Raspicam. OpenCV will be unable to differentiate any change but it won't be able to find and access the camera module.\\
+When OpenCV tries to locate a camera it looks for a device ID. The camera module does have a device ID but it's not an integer value. It is the value 'pi' and because of this OpenCV cannot use the camera module with it's default drivers. To resolve this driver issue UV4L (Universal Video 4 Linux) is used instead. UV4L will create a device node from the given driver Raspicam. OpenCV will be unable to notice any difference but it will be able to find and access the camera module.\\
 
-When using this driver the UV4L initializing script must be executed. By adding it to the Raspberry's start up script or it can be called after each boot. The parameters passed in can be interchangeable. \\
+When using this driver the UV4L initializing script must be executed, by adding it to the Raspberry Pi's start up script or it can be called after each boot. The parameters passed in can be interchangeable. \\
 
 
 \noindent
@@ -287,7 +300,7 @@ When using this driver the UV4L initializing script must be executed. By adding 
 \subsection{Apache}
 \label{subsec:Apache}
 %\break
-Apache web hosting will be used to host the Raspberry Spi website. Apache will be permanently running as a background process. While the Pi is handling motion detection and taking photos the website will be accessible and process requests received. Apache will be available, as soon as the Pi boots, this means that as long as the Pi is switched on the website will be available for users to access.\\ 
+Apache web hosting will be used to host the Raspberry Spi website. Apache will be permanently running as a background process. While the Raspberry Pi is handling motion detection and taking photos the website will be accessible and process requests received. Apache will be available, as soon as the Pi boots, this means that as long as the Pi is switched on the website will be available for users to access.\\ 
 
 \noindent
 %{\bf Motion:}\\
@@ -331,16 +344,16 @@ The following are ports that will be used:
 
 Port 80 is necessary and until this port is open the Raspberry Spi website will not be accessible. This is responsible for all HTTP requests. With Port 80 open when the router receives a HTTP request it will know which device on the local network to send the request on to.\\
 
-Port 22 is optional and is dependant on the end users requirements to interact or make changes on the Raspberry Pi itself. If Port 22 is open this will allow a user to SSH (Secure Shell) directly into it. SSH means that they can use the IP address of the Pi and log into it from another machine. SSHing into the Pi will allow the user to make changes from any computer instead of using the Raspberry and having to attach a keyboard and mouse which depending on where the Raspberry is set up could prove to be difficult.\\
+Port 22 is optional and is dependant on the end users requirements to interact or make changes on the Raspberry Pi itself. If Port 22 is open this will allow a user to SSH (Secure Shell) directly into it. SSH means that they can use the IP address of the Raspberry Pi and log into it from another machine. SSHing into the Raspberry Pi will allow the user to make changes from any computer instead of using the Raspberry Pi and having to attach a keyboard and mouse which depending on where the Raspberry Pi is set up could prove to be difficult.\\
 
 Port 8000/9000 or 8080 will be used for live streaming. This port can be changed but will default to one of these ports. Modifying the port that will be used for live streaming can be done in the Motion configuration file.\\
 
 \noindent
 %{\bf A browser with JavaScript enabled:}\\
-\subsection{A browser with JavaScript enabled}
+\subsection{A Browser with JavaScript Enabled}
 \label{subsec:javascript}
 %\break
-This project has a JavaScript function in one of the web pages. Due to this, using a browser that has JavaScript enabled needs to be used when viewing the website. The website will still appear but certain features will be unavailable without the user knowing. This issue will only affect the user if they view the website on the Pi itself as most browsers for modern day computers have JavaScript pre-installed. If a user decides to view the website on the Raspberry Pi the only browser currently available that has JavaScript enabled is Chromium.\\
+This project has a JavaScript function in one of the web pages. Due to this, using a browser that has JavaScript enabled needs to be used when viewing the website. The website will still appear but certain features will be unavailable without the user knowing. This issue will only affect the user if they view the website on the Raspberry Pi itself as most browsers for modern day computers have JavaScript pre-installed. If a user decides to view the website on the Raspberry Pi the only browser currently available that has JavaScript enabled is Chromium.\\
 %
 %
 \chapter{Implementation}
@@ -373,7 +386,7 @@ Once port forwarding has been implemented the Raspberry Spi web application will
 
 Accessing the website will require a user name and password to view any pages. The access of the site is controlled by a .htaccess file, this file is an Apache configuration file. This file stores what will be displayed when asking for the password. Currently the only information that will be displayed to the user before they enter a user name or password is the words 'Raspberry Spi' to let the user know what they are logging in to.\\
 
-Passwords are stored separately from the files and directories for the web pages. This prevents them from being accessed by accident, viewed by accident or edited maliciously. The passwords and associated user names are stored in a .htpasswd file. The passwords are encrypted and are not human readable. If a user would like to add a user name or password it will need to be added from the actual Pi not the web application. This is done to stop any phishing attempts at accessing the site or spam requests being sent to the Pi. The web application will provide no hints to passwords or user names or options to change either.\\
+Passwords are stored separately from the files and directories for the web pages. This prevents them from being accessed by accident, viewed by accident or edited maliciously. The passwords and associated user names are stored in a .htpasswd file. The passwords are encrypted and are not human readable. If a user would like to add a user name or password it will need to be added from the actual Raspberry Pi not the web application. This is done to stop any phishing attempts at accessing the site or spam requests being sent to the Raspberry Pi. The web application will provide no hints to passwords or user names or options to change either.\\
 
 \section{Help Page}
 \label{sec:help}
@@ -416,7 +429,7 @@ An example of this would be:\\
 
 \textbf{\textit{g++ realTimePhoto.cpp -o realTimePhoto.cgi\\ }}
 
-When a user selects to take a real time photo, that request is then sent to the Pi and it is asking to run the real time photo CGI script. The C++ program is then executed and the results are returned and displayed on the web page. The layout and results shown to the user are taken from the C++ program.\\
+When a user selects to take a real time photo, that request is then sent to the Raspberry Pi and it is asking to run the real time photo CGI script. The C++ program is then executed and the results are returned and displayed on the web page. The layout and results shown to the user are taken from the C++ program.\\
 
 Any changes that are made to the C++ program will require compilation to happen again.\\
 
@@ -438,14 +451,14 @@ Only if the frame is successful will a proper web page load. If the camera doesn
 \end{figure}
 
 
-
+\newpage
 \section{Motion Detection}
 \label{sec:motion}
 % LiveStreaming
 \subsection{How Motion Detection Works}
 \label{subsec:motionworks}
 
-Motion detection is done by using the OpenCV library. The method chosen for motion detection is Absolute Difference. This method will detect changes happening after frames are read in. This method was chosen because it is effective at detecting motion while not overpowering the Pi.\\
+Motion detection is achieved by using the OpenCV library. The method chosen for motion detection is Absolute Difference. This method will detect changes happening after frames are read in. This method was chosen because it is effective at detecting motion while not overpowering the Raspberry Pi.\\
 
 OpenCV has an inbuilt function called {\it absdiff()}. This method takes in two coloured (RGB) frames. The two frames are then subtracted from one another producing a new RGB image that contains the differences if any. RGB images are not useful when looking for changes so the difference image is converted to grayscale. This means that the image will only contain black and white pixels making it easier to see if there are any changes from one frame to the next. If there are no changes the image will only contain black pixels. When there are changes white pixels will appear. The white pixels are counted and if there are more pixels then a set threshold then motion has been detected.\\
 
@@ -495,28 +508,29 @@ This image is the difference image after it has been converted to grayscale. The
 
 Total time for this process to occur once defaults to 5FPS. Motion detection will skip every three frames read in but this can be changed.
 
+\newpage
 \subsection{Front End Motion Detection Web Page}
 \label{subsec:motionwebpageF}
 
-On the motion detection web page there are two options. Start motion detection and stop motion detection. If motion detection is currently running it will be displayed to the user. There will be text displaying if the motion detection is on or off as well as a small icon which will appear. Depending on the selected option a different icon will appear. These icons will notify a user if starting or stopping motion detection was successful. If a user does press start even though motion detection is running it does not affect the process in any way. Motion detection will continue to run as normal. This is also the same for pressing stop motion detection. If no motion detection is running pressing stop will not cause any changes.\\
+On the motion detection web page there are two options. Start motion detection and stop motion detection. If motion detection is currently running it will be displayed to the user. There will be text displaying if the motion detection is on or off as well as a small icon that appears. Depending on the selected option a different icon will appear. These icons will notify a user if starting or stopping motion detection was successful. If a user does press start even though motion detection is running it does not affect the process in any way. Motion detection will continue to run as normal. This is also the same for pressing stop motion detection. If no motion detection is running pressing stop will not cause any changes.\\
 
 Screen shots from the motion detection section on the web application:
 
 \begin{figure}[H]
 	\centering	
-	\includegraphics [scale=0.7]{../../Pictures/MotionDetectionStart.jpg} 
+	\includegraphics [scale=0.65]{../../Pictures/MotionDetectionStart.jpg} 
 	\caption{Motion Detection page\\}	
 \end{figure}
 
 \begin{figure}[H]
 	\centering	
-	\includegraphics [scale=0.7]{../../Pictures/MotionStarted.jpg} 
+	\includegraphics [scale=0.55]{../../Pictures/MotionStarted.jpg} 
 	\caption{Motion Detection after it is started\\}	
 \end{figure}
 
 \begin{figure}[H]
 	\centering	
-\includegraphics [scale=0.7]{../../Pictures/MotionStopped.jpg}
+\includegraphics [scale=0.57]{../../Pictures/MotionStopped.jpg}
 	\caption{Motion Detection after it is stopped\\}	
 \end {figure}
 
@@ -541,7 +555,7 @@ Below are the icons in a larger form which are used to tell a user if motion det
 \end{figure}
 
 
-\subsection{Back End of the Motion Detection Web Page}
+\subsection{Back End Motion Detection Web Page}
 \label{subsec:motionwebpageB}
 The back end of the motion detection web page is controlled by a JavaScript function. This function will send an AJAX request to a PHP program when a button is pressed. PHP is a server side language so a request is required from the application to execute the PHP program. The PHP program will call the correct bash script which depending on the option selected will either start or stop motion detection.\\
 
@@ -550,12 +564,12 @@ When a button is pressed the value of either 'start' or 'stop' will be passed in
 
 This motion detection JavaScript function is the reason why a JavaScript enabled browser is necessary.\\
 
-
+\newpage
 \section{Video Live Streaming}
 \label{sec:video}
 % Future Possibilites
 
-Motion is a program that is available to download and will be used to handle video live streaming. It sets up a video stream and will display the images that it receives from the camera attached to the Pi to a given web page on a particular port. It can also offer to do motion detection but since this has been implemented using OpenCV this aspect of Motion is not in use for this project.\\
+Motion is a program that is available to download and will be used to handle video live streaming. It sets up a video stream and will display the images that it receives from the camera attached to the Raspberry Pi to a given web page on a particular port. It can also offer to do motion detection but since this has been implemented using OpenCV this aspect of Motion is not in use for this project.\\
 
 
 Parameters in the Motion config must be edited before runtime, an example of this would include how many frames it will display per second to the port the video is displayed on. Motion will take frames from the camera and display them on to the web page. To avoid saving large video files that may not contain any useful information from taking up space, no live streaming imagery is stored. This feature currently does not work properly or efficiently. Future work for this project would be to tune this feature to ensure more accuracy and efficiency.\\
@@ -571,7 +585,7 @@ The video live streaming option on the home page of the web application does not
 \label{sec:motionTest}
 %
 
-Testing for this application was highly complex to ensure the Pi was not overpowered resulting in it to being unable to process anything else. Motion Detection on a computer, not a Pi, would in general read in every frame from a video stream and process each of the frames looking for motion. The Pi is capable of such a task but for this project it is expected to keep a website running and be able to process all the requests that it receives as the motion detection is running in the background. For this not every frame is read in but finding out the correct number of frames to skip and still be able to detect motion is where most of the testing took place.\\
+Testing for this application was highly complex to ensure the Raspberry Pi was not overpowered resulting in it being unable to process anything else. Motion Detection on a computer, not a Raspberry Pi, would in general read in every frame from a video stream and process each of the frames looking for motion. The Raspberry Pi is capable of such a task but for this project it is expected to keep a website running and be able to process all the requests that it receives as the motion detection is running in the background. For this not every frame is read in but finding out the correct number of frames to skip and still be able to detect motion is where most of the testing took place.\\
 
 To test motion detection the object of a book was used. The book was held in front of the camera and moved from one side of the frame to the other. The test started at skipping ten frames which means that each following tenth frame was used. Skipping ten frames was unsuccessful as it occasionally only caught the end of any motion that was happening. Skipping ten frames was reduced down to skipping five frames and the test was repeated. It proved to work much better but it still did not catch all the motion that was happening. The frames being skipped was reduced down to three frames. This test proved to have the highest success rate for detecting motion and at the same time it did not interfere with the web application.\\
 
@@ -580,7 +594,7 @@ The frames were reduced to having no skips but then motion detection started int
 \section{Testing Raspberry Spi Web Application}
 \label{sec:websiteTest}
 %
-Once motion detection was found to work correctly and as planned the website was tested to ensure if the Pi was able to process requests while motion detection was running in the background.\\
+Once motion detection was found to work correctly and as planned the website was tested to ensure if the Raspberry Pi was able to process requests while motion detection was running in the background.\\
 
 For this test motion detection was started and different test users were asked to log into the website and go through all the images stored on the Pi. Objects were then moved in front of the camera so that motion detection would start saving images. From this test, motion detection captured images were successfully saved, no users had any issues or delays logging in or in accessing the photos.\\
 
@@ -588,7 +602,7 @@ For this test motion detection was started and different test users were asked t
 \label{sec:realPhotoTest}
 %
 
-Testing a real time photo was done by placing different objects in front of the camera and when a real time photo was taken seeing if they would appear.\\
+Testing a real time photo was achieved by placing different objects in front of the camera and when a real time photo was taken seeing if they would appear.\\
 
 
 \section{Testing Live Streaming}
@@ -596,26 +610,24 @@ Testing a real time photo was done by placing different objects in front of the 
 %
 Live Streaming was tested on a localhost connection rather than through the web application. A subject walked across the screen to ensure the stream was live and the correctness of the FPS. This was a successful test.\\
  
-When testing live streaming with the website it caused several issues such as taking down and stopping Apache, causing the web page to be unavailable and effecting the Wifi connection on the Pi.
+When testing live streaming with the website it caused several issues such as taking down and stopping Apache, causing the web page to be unavailable and effecting the Wifi connection on the Raspberry Pi.
 
-\section{Testing Photo Storage}
+\section{Testing Photo Storage and Timestamps}
 \label{sec:photoStorageTest}
 %
-Real time photos were taken and the time was recorded so it could compared to the time stamp to test if the photos were being stored on the Pi. The web address where all photos are stored was checked to ensure the image appeared with the correct time stamp and the expected photo. All photos taken from either feature appeared in a swift manner and available for viewing, timestamps and dates on each photo were also always correct.\\
+
+Real time photos were taken and the time was recorded so it can be cross checked with the timestamp on the photo. The web address where all photos are stored was checked to ensure the image appeared with the correct time stamp and the expected photo. All photos taken from either feature appeared in a swift manner and available for viewing, timestamps and dates on each photo were also always correct.\\
 
 
 \chapter{Conclusion}
 \label{ch:concl}
 %
-%
 % 42
-%
-%
-The aim of this project was to build a new kind of security system that is affordable and easy to use but also effective. Raspberry Spi has achieved what was set out to create, it is an affordable set up that is both easy to use and easy to control. Users are able to view photos previously taken or captured from motion detection, live stream video or start and stop motion detection all from a web application that is successfully hosted on the Pi. \\
+The aim of this project was to build a new kind of security system that is affordable and easy to use but also effective. Raspberry Spi has achieved what was set out to create, it is an affordable set up that is both easy to use and easy to control. Users are able to view photos previously taken or captured from motion detection, live stream video or start and stop motion detection all from a web application that is successfully hosted on the Raspberry Pi. \\
 
-Various changes can be made to match each user depending on their preference. It can have multiple real life applications for varying end users. Being set up on a home network allows for having full control over the system from who can access the Raspberry to the resolution of images being used. All features are fully customizable to the end users requirements.\\
+Various changes can be made to match each user depending on their preference. It can have multiple real life applications for varying end users. Setting it up on a home network allows for having full control over the system from who can access the Raspberry to the resolution of images being used. All features are fully customizable to the end users requirements.\\
 
-All of the Raspberry Spi code is completely open source and is available to download from GitHub. This project has been made open source because it will allow for endless possibilities of additional extras to be added to it by other people. Many different people may see this project in a different way and could add their own completely unique and different ideas.\\
+All of the Raspberry Spi code is completely open source and is available to download from GitHub. This project has been made open source because it will allow for endless possibilities of additional extras to be added to it by other people. Many different people may see this project in a variety of ways and could add their own completely unique and separate ideas.\\
 
 % \cite{notes}
 \noindent
@@ -629,16 +641,16 @@ All of the Raspberry Spi code is completely open source and is available to down
 
 The video streaming is not yet fully implemented or optimized. To further develop this area of the project would require a redesign of the live streaming implementation or further optimize the current Apache integration with the program Motion.\\
 
-An alternative approach to this project could be to use the PiNoir camera which is specifically designed to only work at night time and has no infrared filter. The camera connection would be identical to the Raspberry Pi Camera Module. It would be a Raspberry Spi project for during the night. This would adapt the Raspberry Spi project for night time surveillance.\\
+An alternative approach to this project could be to use the PiNoir camera which is specifically designed to only work at night time and has no infrared filter. The camera connection would be identical to the Raspberry Pi Camera Module. This would adapt the Raspberry Spi project for night time surveillance.\\
 
-Additional proposed features, after user feedback would be the implementation of notifications. This could alert the user to the new images being captured to avoid manual refreshing of the web site. They would start motion detection, leave the web page and check back for any new images at a later stage. Notifications could be set up so if there is a lot of motion being detected the Pi would simply send a notification of an email to the user that something has been detected and a photo of the motion that was captured could be attached.\\
+Additional proposed features, after user feedback would be the implementation of notifications. This could alert the user to the new images being captured to avoid manual refreshing of the web site. They would start motion detection, leave the web page and check back for any new images at a later stage. Notifications could be set up so if there is a lot of motion being detected the Raspberry Pi would simply send a notification by email to the user that something has been detected and a photo of the motion that was captured could be attached.
 
 \section{Expansion Work}
 \label{sec:expansion}
 
-Raspberry Spi has been created as a system that is to be used in a home, but it could be modified to work in other places that could use features like motion detection, live video streaming and storing this information. An area like farming could use a project like this to keep an eye on a shelter for livestock. A building of that size couldn't be monitored at all times, but the Raspberry Spi would allow for monitoring to happen while there is no one to keep watch on the building.\\
+Raspberry Spi has been created as a system for use in the home, but it could be modified to work in other places that could use features like motion detection, live video streaming and storing this information. An area like farming could use a project like this to keep an eye on a shelter for livestock. A building of that size couldn't be monitored at all times, but the Raspberry Spi would allow for monitoring to happen while there is no one to keep watch on the building.\\
 
-Further expanding of this project would involve adding in more Raspberry Pi's to the system, creating a distributed system. One Pi per room or as many as preferred, one Pi would act as a central server controlling the web pages and the other Pi's on the system would handle taking photos, motion detection and live streaming.\\
+Further expanding of this project would involve adding in more Raspberry Pi's to the system, creating a distributed system. One Raspberry Pi per room or as many as preferred, one Raspberry Pi would act as a central server controlling the web pages and the other Raspberry Pi's on the system would handle taking photos, motion detection and live streaming.
 
 %RaspberrySpi Logo SPY guy
 \newpage
@@ -648,11 +660,89 @@ Further expanding of this project would involve adding in more Raspberry Pi's to
 \end{figure}
 
 
-\begin{thebibliography}{9}
-  %Example reference for later
-   \bibitem{notes} John W. Dower {\em Readings compiled for History
-  21.479.}  1991.
+\begin{thebibliography}{99}
+   \bibitem{Crist} Ry Crist, \emph{DIY security options offer smarter peace of mind}, (2013), available at
+\url{http://www.cnet.com/uk/news/diy-security-options-offer-smarter-peace-of-mind/}.
 
-\end{thebibliography}	
+\bibitem{ezwatch} ezwatch.com, \emph{How to Wire and Power a Security Camera}, (2014), available at
+\url{http://www.ezwatch.com/security-cameras/wiring-power-security-cameras}.
+
+\bibitem{Karp} Gregory Karp, \emph{Alarms should sound on deal}, (2012), available at
+\url{http://articles.chicagotribune.com/2012-05-11/site/sc-cons-0510-karpspend-20120511_1_burglar-alarms-home-security-carbon-monoxide-alarms}.
+
+\bibitem{scw} Security Camera Warehouse, \emph{Security Camera Systems}, (2014), available at
+\url{http://www.security-camera-warehouse.com/security-camera-system/}.
+
+\bibitem{Nikolaidis} Alex Nikolaidis, \emph{How to make a DIY home alarm system with a raspberry pi and a webcam}, (2013), available at
+\url{https://medium.com/random-things/2d5a2d61da3d}.
+
+
+\bibitem{Albrecht} Mikael Albrecht, \emph{Make your own DIY surveillance system}, (2013), available at
+\url{http://safeandsavvy.f-secure.com/2013/06/06/make-your-own-diy-surveillance-system/#.U1Z7to-h5wA}.
+
+\bibitem{element14} element14.com, \emph{Plug Into Your World with the Raspberry Pi}, (2014), available at
+\url{http://www.element14.com/community/community/raspberry-pi}.
+
+\bibitem{Hess} Ken Hess, \emph{Raspberry Pi: How I spent almost \$150 on a \$35 computer}, (2013), available at
+\url{http://www.zdnet.com/raspberry-pi-how-i-spent-almost-150-on-a-35-computer-7000020574/}.
+
+\bibitem{elinux} elinux.org, \emph{RPi Hub}, (2014), available at
+\url{http://elinux.org/RPi_Hub}.
+
+
+\bibitem{Orsini} Lauren Orsini, \emph{12 Cool Projects For Your Raspberry Pi}, (2014), available at
+\url{http://readwrite.com/2014/01/21/raspberry-pi-great-projects#awesm=~oCaIqfhOd63QUU}.
+
+\bibitem{raspberrypiorg} raspberrypi.org/, \emph{Raspberry Pi}, (2014), available at
+\url{http://www.raspberrypi.org/}.
+
+\bibitem{raspberrypiorg} raspberrypi.org/, \emph{Raspberry Pi OpenCV}, (2014), available at
+\url{http://www.raspberrypi.org/tag/opencv/}.
+
+\bibitem{Raufast} Pierre Raufast /, \emph{OpenCV and Pi Camera Board !}, (2013), available at
+\url{http://thinkrpi.wordpress.com/2013/05/22/opencv-and-camera-board-csi/}.
+
+
+\bibitem{Castle} Robert Castle /, \emph{Installing OpenCV on a Raspberry Pi}, (2014), available at
+\url{http://robertcastle.com/2014/02/installing-opencv-on-a-raspberry-pi/}.
+
+\bibitem{Verstraeten} Cédric Verstraeten /, \emph{Install OpenCV on a Raspberry Pi}, (2014), available at
+\url{http://blog.cedric.ws/install-opencv-on-raspberry}.
+
+\bibitem{letsmakerobots} letsmakerobots.com /, \emph{OpenCV on Raspberry Pi}, (2014), available at
+\url{http://letsmakerobots.com/node/36947}.
+
+\bibitem{OpenCV} OpenCV /, \emph{All OpenCV references}, (2014), available at
+\url{http://docs.opencv.org/}.
+
+\bibitem{Kirn} Peter Kirn /, \emph{All OpenCV references}, (2009), available at
+\url{http://createdigitalmotion.com/2009/02/processing-tutorials-getting-started-with-video-processing-via-opencv/}.
+
+\bibitem{Kirn} Peter Kirn /, \emph{Setting up Wireless motion-detect cam}, (2013), available at
+\url{http://rbnrpi.wordpress.com/project-list/setting-up-wireless-motion-detect-cam/}.
+
+\bibitem{Sharma} Mayank Sharma /, \emph{Use the Raspberry Pi as a DIY Surveillance camera}, (2014), available at
+\url{http://www.maketecheasier.com/raspberry-pi-as-surveillance-camera/}.ra/
+
+
+\bibitem{w3html} www.w3schools.com /, \emph{HTML}, (2014), available at
+\url{http://www.w3schools.com/html/}.
+
+\bibitem{w3js} www.w3schools.com /, \emph{JavaScript}, (2014), available at
+\url{http://www.w3schools.com/js/}.
+
+\bibitem{w3ajax} www.w3schools.com /, \emph{AJAX}, (2014), available at
+\url{http://www.w3schools.com/ajax/}.
+
+\bibitem{w3php} www.w3schools.com /, \emph{PHP}, (2014), available at
+\url{http://www.w3schools.com/PHP/}.
+
+\bibitem{tldp} tldp.org /, \emph{Bash Scripting}, (2014), available at
+\url{http://tldp.org/HOWTO/Bash-Prog-Intro-HOWTO.html}.
+
+\bibitem{UV4L}UV4L/, \emph{UV4L}, (2014), available at
+\url{http://www.linux-projects.org/modules/sections/index.php?op=viewarticle&artid=14}.
+
+\end{thebibliography}
 
 \end{document} 
